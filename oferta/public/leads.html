@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Leads — Dias de Moda Uniformes</title>
+    <style>
+      :root {
+        --rose: #ae567c;
+        --rose-deep: #8c3f63;
+        --rose-light: #e1adb1;
+        --rose-surface: #f6e6ea;
+        --plum: #2b1a22;
+        --plum-soft: #5c4450;
+        --cream: #fbf6f4;
+        --whatsapp: #25d366;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--plum);
+        font-family: 'Karla', system-ui, sans-serif;
+        line-height: 1.5;
+        padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem;
+      }
+      .wrap { max-width: 72rem; margin: 0 auto; }
+      header { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
+      .brand { line-height: 1; }
+      .brand .top { font-family: Georgia, serif; font-weight: 700; font-size: 1.35rem; letter-spacing: 0.05em; }
+      .brand .sub { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.4em; color: var(--rose); }
+      .stats { display: flex; gap: 0.75rem; margin-left: auto; flex-wrap: wrap; }
+      .stat { background: #fff; border: 1px solid rgb(174 86 124 / 0.18); border-radius: 0.9rem; padding: 0.6rem 1rem; text-align: center; }
+      .stat b { display: block; font-family: Georgia, serif; font-size: 1.5rem; color: var(--rose-deep); }
+      .stat span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--plum-soft); }
+
+      .bar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1rem; }
+      .bar input[type='search'] {
+        flex: 1; min-width: 14rem; height: 2.75rem; border: 1px solid rgb(174 86 124 / 0.22);
+        border-radius: 999px; padding: 0 1.2rem; font: inherit; background: #fff;
+      }
+      .btn {
+        display: inline-flex; align-items: center; gap: 0.5rem; border: 0; border-radius: 999px;
+        padding: 0.7rem 1.3rem; font: inherit; font-weight: 700; cursor: pointer;
+        background: var(--rose); color: #fff; transition: background-color 0.2s;
+      }
+      .btn:hover { background: var(--rose-deep); }
+      .btn--ghost { background: transparent; color: var(--rose-deep); box-shadow: inset 0 0 0 2px var(--rose-light); }
+      .btn--ghost:hover { background: var(--rose-surface); }
+
+      .table-wrap { background: #fff; border-radius: 1.25rem; border: 1px solid rgb(174 86 124 / 0.14); overflow-x: auto; box-shadow: 0 18px 40px -30px rgb(43 26 34 / 0.5); }
+      table { width: 100%; border-collapse: collapse; min-width: 60rem; }
+      th, td { text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid rgb(174 86 124 / 0.1); font-size: 0.9rem; vertical-align: top; }
+      th { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--plum-soft); background: var(--rose-surface); }
+      tr:last-child td { border-bottom: 0; }
+      .name { font-weight: 700; }
+      .muted { color: var(--plum-soft); font-size: 0.85rem; }
+      a.tel { color: var(--rose-deep); font-weight: 700; text-decoration: none; }
+      .badge { display: inline-block; border-radius: 999px; padding: 0.15rem 0.7rem; font-size: 0.72rem; font-weight: 700; background: var(--rose-surface); color: var(--rose-deep); }
+      select.status { font: inherit; font-size: 0.85rem; border: 1px solid rgb(174 86 124 / 0.25); border-radius: 0.5rem; padding: 0.3rem 0.5rem; background: #fff; }
+      .code { font-family: monospace; font-weight: 700; color: var(--rose-deep); white-space: nowrap; }
+      .empty { padding: 3rem; text-align: center; color: var(--plum-soft); }
+      .error { background: #fdecea; color: #b3261e; border-radius: 0.9rem; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+      .quiz { font-size: 0.8rem; color: var(--plum-soft); max-width: 16rem; }
+      .quiz b { color: var(--plum); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="top">DIAS DE MODA</div>
+          <div class="sub">UNIFORMES</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-total>0</b><span>leads</span></div>
+          <div class="stat"><b data-novos>0</b><span>novos</span></div>
+        </div>
+        <div class="stats">
+          <button class="btn btn--ghost" data-refresh>Atualizar</button>
+          <a class="btn" href="/api/leads?format=csv">Exportar CSV</a>
+        </div>
+      </header>
+
+      <div class="error" data-error hidden></div>
+
+      <div class="bar">
+        <input type="search" placeholder="Buscar por nome, empresa ou telefone…" data-search />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Lead</th>
+              <th>Telefone</th>
+              <th>Origem</th>
+              <th>Quiz</th>
+              <th>Cupom</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody data-tbody>
+            <tr><td colspan="7" class="empty">Carregando…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      const tbody = document.querySelector('[data-tbody]');
+      const errorBox = document.querySelector('[data-error]');
+      const totalEl = document.querySelector('[data-total]');
+      const novosEl = document.querySelector('[data-novos]');
+      const searchInput = document.querySelector('[data-search]');
+
+      const fmtDate = (iso) => {
+        if (!iso) return '—';
+        const d = new Date(iso.replace(' ', 'T') + 'Z');
+        if (Number.isNaN(d.getTime())) return iso;
+        return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: '2-digit' }) +
+          ' ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      };
+
+      const waDigits = (tel) => String(tel || '').replace(/\D/g, '');
+
+      const quizSummary = (l) => {
+        const parts = [];
+        if (l.q1) parts.push(['Produto', l.q1]);
+        if (l.q2) parts.push(['Qtd', l.q2]);
+        if (l.q3) parts.push(['Prazo', l.q3]);
+        if (l.q4) parts.push(['Arte', l.q4]);
+        if (!parts.length) return '<span class="muted">—</span>';
+        return parts.map(([k, v]) => `<b>${k}:</b> ${v}`).join('<br>');
+      };
+
+      const origemLabel = { folheto: 'Folheto', cartao: 'Cartão', direto: 'Direto' };
+
+      const render = (leads) => {
+        const q = searchInput.value.trim().toLowerCase();
+        const filtered = leads.filter((l) =>
+          !q || [l.nome, l.empresa, l.telefone].filter(Boolean).join(' ').toLowerCase().includes(q),
+        );
+
+        totalEl.textContent = leads.length;
+        novosEl.textContent = leads.filter((l) => l.status === 'novo').length;
+
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="7" class="empty">${leads.length ? 'Nenhum lead encontrado para a busca.' : 'Nenhum lead ainda. Assim que o primeiro QR for lido, ele aparece aqui.'}</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = filtered.map((l) => `
+          <tr>
+            <td class="muted" style="white-space:nowrap">${fmtDate(l.criado_em)}</td>
+            <td>
+              <div class="name">${escapeHtml(l.nome)}</div>
+              ${l.empresa ? `<div class="muted">${escapeHtml(l.empresa)}</div>` : ''}
+            </td>
+            <td><a class="tel" href="https://wa.me/${waDigits(l.telefone)}" target="_blank" rel="noopener">${escapeHtml(l.telefone)}</a></td>
+            <td><span class="badge">${origemLabel[l.origem] || escapeHtml(l.origem || '—')}</span></td>
+            <td class="quiz">${quizSummary(l)}</td>
+            <td class="code">${l.codigo ? escapeHtml(l.codigo) : '<span class="muted">—</span>'}</td>
+            <td>
+              <select class="status" data-id="${escapeHtml(l.id)}">
+                <option value="novo" ${l.status === 'novo' ? 'selected' : ''}>Novo</option>
+                <option value="contatado" ${l.status === 'contatado' ? 'selected' : ''}>Contatado</option>
+                <option value="recuperado" ${l.status === 'recuperado' ? 'selected' : ''}>Recuperado</option>
+              </select>
+            </td>
+          </tr>
+        `).join('');
+      };
+
+      const escapeHtml = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+      }[c]));
+
+      let allLeads = [];
+
+      const load = async () => {
+        errorBox.hidden = true;
+        tbody.innerHTML = '<tr><td colspan="7" class="empty">Carregando…</td></tr>';
+        try {
+          const res = await fetch('/api/leads');
+          if (res.status === 401) {
+            errorBox.hidden = false;
+            errorBox.textContent = 'Acesso negado. Recarregue a página e informe a senha.';
+            tbody.innerHTML = '';
+            return;
+          }
+          if (!res.ok) throw new Error('Erro ao carregar leads');
+          allLeads = await res.json();
+          render(allLeads);
+        } catch (err) {
+          errorBox.hidden = false;
+          errorBox.textContent = 'Não foi possível carregar os leads: ' + err.message;
+        }
+      };
+
+      document.querySelector('[data-refresh]').addEventListener('click', load);
+      searchInput.addEventListener('input', () => render(allLeads));
+
+      // troca de status (persistida no banco)
+      tbody.addEventListener('change', async (e) => {
+        const select = e.target.closest('select.status');
+        if (!select) return;
+        const id = select.dataset.id;
+        try {
+          const res = await fetch(`/api/leads/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: select.value }),
+          });
+          if (!res.ok) throw new Error('erro ' + res.status);
+        } catch {
+          errorBox.hidden = false;
+          errorBox.textContent = 'Não foi possível salvar o status.';
+        }
+      });
+
+      load();
+    </script>
+  </body>
+</html>
