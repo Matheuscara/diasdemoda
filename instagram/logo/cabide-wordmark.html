@@ -12,7 +12,7 @@
     font-family: 'Karla', sans-serif;
   }
   .lockup { text-align: center; }
-  .hanger { margin-bottom: 20px; }
+  .hanger { margin-bottom: 26px; }
   .name {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 700;
@@ -41,12 +41,29 @@
 <body>
   <div class="lockup">
     <!-- cabide -->
-    <svg class="hanger" width="300" height="300" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="130" cy="34" r="14" fill="none" stroke="#AE567C" stroke-width="13"/>
-      <line x1="130" y1="48" x2="130" y2="74" stroke="#AE567C" stroke-width="13" stroke-linecap="round"/>
-      <path d="M130 74 L40 216" stroke="#AE567C" stroke-width="13" stroke-linecap="round"/>
-      <path d="M130 74 L220 216" stroke="#AE567C" stroke-width="13" stroke-linecap="round"/>
-      <line x1="40" y1="216" x2="220" y2="216" stroke="#AE567C" stroke-width="13" stroke-linecap="round"/>
+    <svg class="hanger" width="320" height="300" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="corpo" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C26A8C"/>
+          <stop offset="1" stop-color="#8C3F63"/>
+        </linearGradient>
+      </defs>
+
+      <!-- gancho -->
+      <path d="M120 16 C120 28 133 33 133 46 C133 56 120 60 120 68"
+            fill="none" stroke="#AE567C" stroke-width="15" stroke-linecap="round"/>
+
+      <!-- corpo: triângulo arredondado com ombros suaves -->
+      <path d="M120 76
+               C88 86, 50 120, 47 166
+               Q46 180, 60 180
+               L180 180
+               Q194 180, 193 166
+               C190 120, 152 86, 120 76
+               Z" fill="url(#corpo)"/>
+
+      <!-- brilho sutil no ombro esquerdo -->
+      <path d="M120 76 C96 84, 66 110, 60 140" fill="none" stroke="#E1ADB1" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
     </svg>
 
     <div class="name">DIAS DE MODA</div>
