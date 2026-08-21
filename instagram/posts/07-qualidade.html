@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+
+  :root {
+    --rosa: #AE567C; --rosa-escuro: #8C3F63; --rosa-claro: #E1ADB1;
+    --ameixa: #2B1A22; --ameixa-suave: #C9B8C0; --branco: #FBF6F4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; background: var(--ameixa);
+    font-family: 'Karla', 'Helvetica Neue', sans-serif; color: var(--branco);
+    overflow: hidden; position: relative; }
+  .orb { position: absolute; border-radius: 50%; z-index: 0;
+    background: radial-gradient(circle, rgb(174 86 124 / 0.34) 0%, rgb(174 86 124 / 0) 70%); }
+  .orb-a { width: 720px; height: 720px; top: -280px; right: -200px; }
+  .orb-b { width: 560px; height: 560px; bottom: -240px; left: -160px; }
+
+  .frame { position: relative; z-index: 1; height: 100%; padding: 84px 88px;
+    display: flex; flex-direction: column; }
+  .label { font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px;
+    letter-spacing: 6px; text-transform: uppercase; color: var(--rosa-claro); }
+  .stitch { height: 4px; width: 100%; border-radius: 999px; margin-top: 14px;
+    background-image: repeating-linear-gradient(90deg, var(--rosa-claro) 0 7px, transparent 7px 16px); }
+
+  .headline { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+    font-size: 92px; line-height: 1; color: var(--branco); margin-top: 52px; }
+
+  .checks { margin-top: 46px; display: flex; flex-direction: column; gap: 26px; }
+  .check { display: flex; align-items: center; gap: 24px; }
+  .mark { flex: 0 0 58px; height: 58px; border-radius: 50%; background: var(--rosa);
+    color: #fff; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+  .check-title { font-size: 27px; font-weight: 700; color: var(--branco); line-height: 1.2; }
+  .check-sub { font-size: 19px; color: var(--ameixa-suave); margin-top: 4px; }
+
+  .cta-row { margin-top: auto; display: flex; align-items: center; gap: 24px; }
+  .pill { display: inline-flex; align-items: center; background: var(--rosa); color: #fff;
+    font-weight: 700; font-size: 22px; padding: 22px 38px; border-radius: 999px; }
+  .phone { font-size: 19px; color: var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div>
+      <div class="label">Qualidade</div>
+      <div class="stitch"></div>
+    </div>
+    <div class="headline">Qualidade conferida<br>uma a uma.</div>
+    <div class="checks">
+      <div class="check">
+        <div class="mark">✓</div>
+        <div>
+          <div class="check-title">Prazo combinado</div>
+          <div class="check-sub">Você sabe quando recebe, sem surpresa.</div>
+        </div>
+      </div>
+      <div class="check">
+        <div class="mark">✓</div>
+        <div>
+          <div class="check-title">Acabamento revisado</div>
+          <div class="check-sub">Cada peça é conferida antes de sair da confecção.</div>
+        </div>
+      </div>
+      <div class="check">
+        <div class="mark">✓</div>
+        <div>
+          <div class="check-title">Atenção a cada detalhe</div>
+          <div class="check-sub">Costura limpa e personalização no lugar certo.</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Pedir orçamento no WhatsApp</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>
