@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1080px; background:#FBF6F4; font-family:'Karla',sans-serif; color:#2B1A22; overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(225 173 177 / 0.5) 0%, transparent 70%); }
+  .orb-a { width:720px; height:720px; top:-300px; right:-220px; }
+  .orb-b { width:560px; height:560px; bottom:-240px; left:-180px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:#AE567C; }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, #AE567C 0 7px, transparent 7px 16px); }
+  .middle { flex:1; display:flex; flex-direction:column; justify-content:center; }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:74px; line-height:1.04; letter-spacing:0.005em; }
+  .brand { margin-top:44px; font-size:24px; font-weight:700; color:#5C4450; letter-spacing:1px; }
+  .cta-row { display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:#AE567C; color:#FFFFFF; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; }
+  .phone { font-size:19px; color:#5C4450; }
+</style></head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">VOCÊ SABIA</div><div class="stitch"></div></div>
+    <div class="middle">
+      <div class="headline">Atendemos qualquer tipo de empresa</div>
+      <div class="brand">DIAS DE MODA · UNIFORMES</div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Pedir orçamento no WhatsApp</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body></html>
