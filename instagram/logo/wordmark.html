@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Karla:wght@700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { background: transparent; }
+  body {
+    width: 1200px; height: 1200px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Karla', sans-serif;
+  }
+  .lockup { text-align: center; }
+  .name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 168px;
+    letter-spacing: 0.08em;
+    color: #2B1A22;
+    line-height: 0.95;
+  }
+  .sub {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    color: #AE567C;
+    margin-top: 26px;
+    text-indent: 18px; /* compensa o letter-spacing final */
+  }
+  .stitch {
+    width: 240px; height: 5px; border-radius: 999px;
+    background-image: repeating-linear-gradient(90deg, #AE567C 0 14px, transparent 14px 30px);
+    margin: 34px auto 0;
+  }
+</style>
+</head>
+<body>
+  <div class="lockup">
+    <div class="name">DIAS DE MODA</div>
+    <div class="sub">Uniformes</div>
+    <div class="stitch"></div>
+  </div>
+</body>
+</html>
