@@ -1,6 +1,6 @@
 # Dias de Moda Uniformes — Guia da Marca
 
-Confecção de uniformes em Rio Verde · GO, comandada por **Alessandra Dias** (25 anos de costura). Envia para todo o Goiás.
+Confecção de uniformes em Rio Verde · GO, comandada por **Alessandra Dias** (36 anos de costura). Envia para todo o Goiás.
 
 **Contato:** WhatsApp +55 64 9943-1610 · Instagram [@diasdemoda.ale](https://www.instagram.com/diasdemoda.ale/)
 
