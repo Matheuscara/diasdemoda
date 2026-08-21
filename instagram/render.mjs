@@ -19,6 +19,16 @@ const POSTS = [
   { html: '08-bastidores.html', png: '08-bastidores.png' },
   { html: '09-entrega-goias.html', png: '09-entrega-goias.png' },
   { html: '10-depoimento.html', png: '10-depoimento.png' },
+  { html: '11-orcamento-1-dia.html', png: '11-orcamento-1-dia.png' },
+  { html: '12-por-que-uniformizar.html', png: '12-por-que-uniformizar.png' },
+  { html: '13-da-logo-ao-uniforme.html', png: '13-da-logo-ao-uniforme.png' },
+  { html: '14-pacote-equipe.html', png: '14-pacote-equipe.png' },
+  { html: '15-duvidas-frequentes.html', png: '15-duvidas-frequentes.png' },
+  { html: '16-comparacao.html', png: '16-comparacao.png' },
+  { html: '17-agenda-producao.html', png: '17-agenda-producao.png' },
+  { html: '18-depoimento-resultado.html', png: '18-depoimento-resultado.png' },
+  { html: '19-amostra-aprovacao.html', png: '19-amostra-aprovacao.png' },
+  { html: '20-comece-agora.html', png: '20-comece-agora.png' },
 ];
 
 const run = async () => {

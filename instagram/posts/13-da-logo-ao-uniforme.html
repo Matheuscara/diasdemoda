@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  :root { --rosa:#AE567C; --rosa-escuro:#8C3F63; --rosa-claro:#E1ADB1; --ameixa:#2B1A22; --ameixa-suave:#5C4450; --branco:#FBF6F4; --superficie:#F6E6EA; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1080px; background:var(--branco); font-family:'Karla','Helvetica Neue',sans-serif; color:var(--ameixa); overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(225 173 177 / 0.5) 0%, rgb(225 173 177 / 0) 70%); }
+  .orb-a { width:700px; height:700px; top:-280px; right:-200px; }
+  .orb-b { width:540px; height:540px; bottom:-220px; left:-160px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:var(--rosa); }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, var(--rosa) 0 7px, transparent 7px 16px); }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:74px; line-height:1.04; color:var(--ameixa); margin-top:46px; }
+  .flow { margin-top:52px; display:flex; align-items:stretch; gap:0; }
+  .step { flex:1; }
+  .step-box { background:var(--superficie); border-radius:20px; padding:30px 26px; height:100%; box-shadow:0 10px 26px rgb(174 86 124 / 0.12); }
+  .step-kicker { font-family:'Karla',sans-serif; font-weight:700; font-size:13px; letter-spacing:4px; text-transform:uppercase; color:var(--rosa-escuro); }
+  .step-title { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:34px; color:var(--ameixa); margin-top:12px; line-height:1.05; }
+  .step-sub { font-size:17px; color:var(--ameixa-suave); margin-top:10px; line-height:1.4; }
+  .arrow { flex:0 0 48px; display:flex; align-items:center; justify-content:center; color:var(--rosa); font-size:34px; }
+  .cta-row { margin-top:auto; display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:var(--rosa); color:#fff; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; box-shadow:0 14px 34px rgb(174 86 124 / 0.32); }
+  .phone { font-size:19px; color:var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">Transformação</div><div class="stitch"></div></div>
+    <div class="headline">Da logo no papel<br>ao uniforme pronto.</div>
+    <div class="flow">
+      <div class="step">
+        <div class="step-box">
+          <div class="step-kicker">Passo 1</div>
+          <div class="step-title">Sua logo</div>
+          <div class="step-sub">Você envia a arte que já tem pelo WhatsApp.</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="step-box">
+          <div class="step-kicker">Passo 2</div>
+          <div class="step-title">Produção</div>
+          <div class="step-sub">Cortamos, costuramos e personalizamos na confecção.</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="step-box">
+          <div class="step-kicker">Passo 3</div>
+          <div class="step-title">Sua equipe</div>
+          <div class="step-sub">Uniformizada e vestindo a sua marca com elegância.</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Enviar logo e pedir orçamento</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>

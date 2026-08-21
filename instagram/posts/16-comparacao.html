@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  :root { --rosa:#AE567C; --rosa-escuro:#8C3F63; --rosa-claro:#E1ADB1; --ameixa:#2B1A22; --ameixa-suave:#5C4450; --branco:#FBF6F4; --superficie:#F6E6EA; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1080px; background:var(--branco); font-family:'Karla','Helvetica Neue',sans-serif; color:var(--ameixa); overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(225 173 177 / 0.5) 0%, rgb(225 173 177 / 0) 70%); }
+  .orb-a { width:700px; height:700px; top:-280px; right:-200px; }
+  .orb-b { width:540px; height:540px; bottom:-220px; left:-160px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:var(--rosa); }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, var(--rosa) 0 7px, transparent 7px 16px); }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:66px; line-height:1.04; color:var(--ameixa); margin-top:42px; }
+  .vs { margin-top:38px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .col { border-radius:20px; padding:32px 28px; }
+  .col-a { background:var(--superficie); }
+  .col-b { background:var(--ameixa); color:var(--branco); }
+  .col-kicker { font-weight:700; font-size:14px; letter-spacing:4px; text-transform:uppercase; }
+  .col-a .col-kicker { color:var(--rosa-escuro); }
+  .col-b .col-kicker { color:var(--rosa-claro); }
+  .col-title { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:34px; margin-top:12px; line-height:1.05; }
+  .col-list { margin-top:18px; display:flex; flex-direction:column; gap:12px; }
+  .col-item { font-size:19px; line-height:1.4; }
+  .col-a .col-item { color:var(--ameixa-suave); }
+  .col-b .col-item { color:#C9B8C0; }
+  .col-item::before { content:"— "; }
+  .col-b .col-item::before { content:"✦ "; color:var(--rosa-claro); }
+  .cta-row { margin-top:auto; display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:var(--rosa); color:#fff; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; box-shadow:0 14px 34px rgb(174 86 124 / 0.32); }
+  .phone { font-size:19px; color:var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">Comparação</div><div class="stitch"></div></div>
+    <div class="headline">Uniforme padrão ou<br>sob medida?</div>
+    <div class="vs">
+      <div class="col col-a">
+        <div class="col-kicker">Uniforme padrão</div>
+        <div class="col-title">Genérico</div>
+        <div class="col-list">
+          <div class="col-item">Tamanho e caimento fora do padrão</div>
+          <div class="col-item">Logo aplicada sem cuidado</div>
+          <div class="col-item">Sem controle de qualidade</div>
+        </div>
+      </div>
+      <div class="col col-b">
+        <div class="col-kicker">Dias de Moda</div>
+        <div class="col-title">Sob medida</div>
+        <div class="col-list">
+          <div class="col-item">Feito para a sua equipe</div>
+          <div class="col-item">Personalização no lugar certo</div>
+          <div class="col-item">Conferido peça por peça</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Pedir orçamento sob medida</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>
