@@ -26,21 +26,21 @@ npm run build    # gera site/dist/
 npm run preview
 ```
 
-## Deploy — Cloudflare Pages
+## Deploy — Cloudflare
 
-O `site/dist/` é estático puro (caminhos relativos), servível em qualquer host. A produção usa
-**Cloudflare Pages**. Passo a passo em [`site/DEPLOY.md`](site/DEPLOY.md).
+O `site/dist/` é estático puro (caminhos relativos). A produção usa **Cloudflare Workers
+(Static Assets)** — o diretório de saída fica em `site/wrangler.toml`. Passo a passo completo em
+[`site/DEPLOY.md`](site/DEPLOY.md).
 
-Resumo (integração com Git, recomendada):
+Resumo (import do Git, deploy automático):
 
-1. Cloudflare Dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-2. Selecionar este repositório.
-3. Configurar o build:
-   - **Root directory:** `site`
+1. Cloudflare Dashboard → **Workers & Pages** → **Create** → **Import a repository** → escolher `diasdemoda`.
+2. Na tela de setup:
    - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-4. **Save and Deploy**. A cada `git push` na branch principal, o site reconstrói sozinho.
-5. **Custom domains** → adicionar `diasdemoda.com` e `www.diasdemoda.com`.
+   - **Deploy command:** `npx wrangler deploy`
+   - **Advanced → Path:** `site` (não deixe `/`)
+3. **Deploy**. A cada `git push` na `main`, o site reconstrói sozinho.
+4. No Worker → **Settings → Domains & Routes** → adicionar `diasdemoda.com` e `www.diasdemoda.com`.
 
 ## Créditos
 

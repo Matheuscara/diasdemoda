@@ -1,27 +1,40 @@
-# Deploy — Cloudflare Pages + diasdemoda.com
+# Deploy — Cloudflare (Workers Static Assets) + diasdemoda.com
 
-Duas formas. A **integração com Git** é a recomendada: deploy automático a cada `push`, sem
-token nenhum na sua máquina.
+Site 100% estático. A Cloudflare hoje empurra o fluxo de **Workers** (Static Assets) ao
+conectar um repositório — é o recomendado e o que usamos. O "diretório de saída" mora no
+`site/wrangler.toml` (`[assets] directory = "./dist"`), **não** na tela de setup.
 
 ---
 
-## Opção A — Integração com Git (recomendada)
+## Opção A — Import do Git (recomendada, deploy automático)
 
-1. **Cloudflare Dashboard** → **Workers & Pages** → **Create** → aba **Pages** →
-   **Connect to Git** → autorizar o GitHub e escolher o repositório `diasdemoda`.
-2. Na tela de build:
+1. **Cloudflare Dashboard** → **Workers & Pages** → **Create** → **Import a repository** →
+   autorizar o GitHub e escolher `diasdemoda`.
+2. Na tela **Set up your application**:
    | Campo | Valor |
    | --- | --- |
-   | Production branch | `main` |
-   | Framework preset | `None` (ou `Vite`) |
-   | Root directory | `site` |
+   | Project name | `diasdemoda` |
    | Build command | `npm run build` |
-   | Build output directory | `dist` |
-3. **Save and Deploy**. Sai um domínio `diasdemoda.pages.dev` para testar.
+   | Deploy command | `npx wrangler deploy` |
+   | **Advanced → Path** | **`site`** ← aponta para a subpasta do app (não deixe `/`) |
+
+   Não existe campo "output directory" aqui: quem define é o `[assets] directory = "./dist"`
+   do `site/wrangler.toml`.
+3. **Deploy**. Sai um domínio `diasdemoda.<sua-conta>.workers.dev` para testar.
 4. Cada `git push` na `main` reconstrói e publica sozinho.
 
-> A versão do Node vem do `site/.nvmrc` (22). Se o build reclamar, defina a variável de
-> ambiente `NODE_VERSION=22` nas configurações do projeto Pages.
+> **API token:** o aviso sobre `email_routing_*` é irrelevante (é de roteamento de e-mail).
+> O token só precisa de permissão de **Workers Scripts: Edit**. Se o deploy falhar por
+> permissão, edite o token em **My Profile → API Tokens**.
+>
+> **Node:** a versão vem do `site/.nvmrc` (22). Se reclamar, defina `NODE_VERSION=22` nas
+> variáveis do projeto.
+
+### Alternativa: fluxo clássico de Pages
+
+Se preferir a tela antiga com campos explícitos: **Create** → aba **Pages** → **Connect to Git**,
+e use Root directory `site`, Build command `npm run build`, Build output directory `dist`.
+(Nesse caso o `[assets]` do `wrangler.toml` é ignorado — quem manda são os campos da tela.)
 
 ## Opção B — Linha de comando (wrangler)
 
@@ -30,21 +43,19 @@ Deploy manual, sem CI:
 ```bash
 cd site
 npm run build
-npx wrangler login            # abre o navegador para autenticar na sua conta Cloudflare
-npx wrangler pages deploy dist --project-name diasdemoda
+npx wrangler login      # abre o navegador para autenticar na sua conta Cloudflare
+npx wrangler deploy     # lê o wrangler.toml e sobe o ./dist
 ```
 
 ---
 
 ## Domínio diasdemoda.com
 
-O `wrangler.toml` já define o projeto. Depois do primeiro deploy:
+Depois do primeiro deploy, no Worker `diasdemoda`:
 
-1. Projeto Pages → **Custom domains** → **Set up a custom domain**.
+1. **Settings** → **Domains & Routes** → **Add** → **Custom domain**.
 2. Adicionar **`diasdemoda.com`** e **`www.diasdemoda.com`**.
-3. Se o DNS do domínio já está na Cloudflare, os registros são criados automaticamente.
-   Se ainda não está: Cloudflare → **Add a site** → `diasdemoda.com`, e troque os
-   nameservers no seu registrador (registro.br) pelos que a Cloudflare indicar.
+3. Como o DNS já está na Cloudflare, os registros são criados automaticamente.
 
 ### www → apex (evita conteúdo duplicado no Google)
 

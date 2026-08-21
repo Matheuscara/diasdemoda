@@ -1,3 +1,7 @@
 name = "diasdemoda"
 compatibility_date = "2026-08-20"
-pages_build_output_dir = "dist"
+
+# Site 100% estático servido pelo Cloudflare Workers (Static Assets).
+# O "output directory" mora aqui, não na tela de setup.
+[assets]
+directory = "./dist"
