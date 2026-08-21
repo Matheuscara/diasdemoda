@@ -8,9 +8,6 @@ const LOGO_DIR = join(HERE, 'logo');
 
 const LOGOS = [
   { html: 'wordmark.html', png: 'logo-wordmark.png', w: 1200, h: 1200 },
-  { html: 'emblema.html', png: 'logo-emblema.png', w: 1200, h: 1200 },
-  { html: 'icone-wordmark.html', png: 'logo-icone-wordmark.png', w: 1500, h: 1200 },
-  { html: 'cabide-wordmark.html', png: 'logo-cabide-wordmark.png', w: 1200, h: 1300 },
 ];
 
 const run = async () => {
