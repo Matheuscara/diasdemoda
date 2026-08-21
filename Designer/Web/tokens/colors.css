@@ -1,0 +1,20 @@
+:root {
+  /* Base — extraída do arquivo CorelDRAW do logo (docPalette.xml) */
+  --rosa-principal: #AE567C;   /* R174 G86 B124 — cor do logo */
+  --rosa-medio: #A75C7D;       /* R167 G92 B125 — variação do logo */
+  --rosa-claro: #E1ADB1;       /* R225 G173 B177 — cabide/detalhes */
+  --rosa-escuro: #8C3F63;      /* derivado, hover/ênfase */
+  --ameixa: #2B1A22;           /* quase-preto quente da marca */
+  --ameixa-suave: #5C4450;     /* texto secundário */
+  --branco-quente: #FBF6F4;    /* fundo padrão */
+  --rosa-superficie: #F6E6EA;  /* chips, fundos suaves */
+  --dourado: #C9A24B;          /* acento metálico (detalhes 3D) */
+  /* Semânticos */
+  --cor-acao: var(--rosa-principal);
+  --cor-acao-hover: var(--rosa-escuro);
+  --texto-titulo: var(--ameixa);
+  --texto-corpo: var(--ameixa-suave);
+  --fundo-pagina: var(--branco-quente);
+  --fundo-secao-escura: var(--ameixa);
+  --whatsapp: #25D366;
+}

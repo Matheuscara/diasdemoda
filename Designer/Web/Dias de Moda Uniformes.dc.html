@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Dias de Moda Uniformes — Rio Verde GO</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#FBF6F4;color:#2B1A22;font-family:'Karla',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#AE567C;text-decoration:none}
+  a:hover{color:#8C3F63}
+  ::selection{background:#E1ADB1;color:#2B1A22}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @keyframes stitchmove{to{stroke-dashoffset:-24}}
+  @keyframes needle{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+  details summary::-webkit-details-marker{display:none}
+</style>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(251,246,244,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(174,86,124,0.15)">
+  <div style="display:flex;flex-direction:column;line-height:1">
+    <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;letter-spacing:1px;color:#2B1A22">DIAS DE MODA</span>
+    <span style="font-size:10px;letter-spacing:5px;color:#AE567C;font-weight:700">UNIFORMES</span>
+  </div>
+  <div style="display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500">
+    <a href="#produtos" style="color:#2B1A22">Produtos</a>
+    <a href="#processo" style="color:#2B1A22">Como funciona</a>
+    <a href="#clientes" style="color:#2B1A22">Clientes</a>
+    <a href="#faq" style="color:#2B1A22">FAQ</a>
+    <a href="https://wa.me/556499431610" target="_blank" style="background:#AE567C;color:#fff;padding:10px 22px;border-radius:999px;font-weight:700;white-space:nowrap" style-hover="background:#8C3F63;color:#fff">Pedir orçamento</a>
+  </div>
+</nav>
+
+<header style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 40px 80px">
+  <div data-parallax="0.18" style="position:absolute;top:-120px;right:-140px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,#E1ADB1 0%,rgba(225,173,177,0) 70%);opacity:.7"></div>
+  <div data-parallax="0.1" style="position:absolute;bottom:-180px;left:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,#F0D4DA 0%,rgba(240,212,218,0) 70%)"></div>
+  <x-import component-from-global-scope="scissors-3d" from="./scissors-3d.js" hint-size="100%,100%" style="position:absolute;top:0;right:0;width:58%;height:100%;pointer-events:none;z-index:0"></x-import>
+  <div style="max-width:1240px;margin:0 auto;width:100%;position:relative;z-index:1">
+    <div style="max-width:660px">
+      <p data-reveal="" style="letter-spacing:6px;font-size:13px;font-weight:700;color:#AE567C;margin:0 0 18px">RIO VERDE · GOIÁS · DESDE SEMPRE COSTURANDO</p>
+      <h1 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5.6vw,84px);line-height:1.02;margin:0;font-weight:600;max-width:14ch;text-wrap:balance">Uniformes que vestem a sua marca com elegância.</h1>
+      <svg data-reveal="" width="340" height="14" viewBox="0 0 340 14" style="margin:26px 0 0;display:block"><path d="M2 7 H338" pathLength="100" stroke="#AE567C" stroke-width="3" stroke-dasharray="4 5" fill="none" style="animation:stitchmove 1.2s linear infinite"></path></svg>
+      <p data-reveal="" style="font-size:19px;line-height:1.6;color:#5C4450;max-width:50ch;margin:28px 0 36px">Camisetas, camisas sociais e jalecos sob medida para a sua equipe — com bordado da sua logo, sublimação e faixa refletiva. Confecção própria comandada por Alessandra Dias, com 25 anos de costura.</p>
+      <div data-reveal="" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <a href="https://wa.me/556499431610?text=Olá! Quero um orçamento de uniformes." target="_blank" style="background:#AE567C;color:#fff;padding:18px 36px;border-radius:999px;font-weight:700;font-size:17px;box-shadow:0 12px 30px rgba(174,86,124,0.35);transition:transform .2s;white-space:nowrap" style-hover="background:#8C3F63;color:#fff;transform:translateY(-2px)">Pedir orçamento no WhatsApp</a>
+        <a href="#produtos" style="padding:18px 28px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid #E1ADB1;color:#8C3F63;white-space:nowrap" style-hover="border-color:#AE567C;color:#8C3F63">Ver produtos</a>
+      </div>
+      <div data-reveal="" style="display:flex;gap:36px;margin-top:52px;flex-wrap:wrap;align-items:center">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:#8C3F63;line-height:1">25</span>
+          <span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#5C4450">ANOS DE<br>COSTURA</span>
+        </div>
+        <div style="width:1px;height:44px;background:rgba(174,86,124,.25)"></div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span style="font-size:15px;font-weight:700;color:#2B1A22">Confecção própria</span>
+          <span style="font-size:13px;color:#5C4450">do corte ao bordado final</span>
+        </div>
+        <div style="width:1px;height:44px;background:rgba(174,86,124,.25)"></div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span style="font-size:15px;font-weight:700;color:#2B1A22">Atendimento direto</span>
+          <span style="font-size:13px;color:#5C4450">orçamento no mesmo dia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div style="background:#2B1A22;color:#F0D4DA;overflow:hidden;padding:16px 0;white-space:nowrap">
+  <div style="display:inline-flex;gap:48px;animation:marquee 22s linear infinite;font-size:14px;letter-spacing:4px;font-weight:700">
+    <span>BORDADO DA SUA LOGO</span><span>✦</span><span>SUBLIMAÇÃO</span><span>✦</span><span>FAIXA REFLETIVA</span><span>✦</span><span>MANGA LONGA OU CURTA</span><span>✦</span><span>CONFECÇÃO PRÓPRIA</span><span>✦</span>
+    <span>BORDADO DA SUA LOGO</span><span>✦</span><span>SUBLIMAÇÃO</span><span>✦</span><span>FAIXA REFLETIVA</span><span>✦</span><span>MANGA LONGA OU CURTA</span><span>✦</span><span>CONFECÇÃO PRÓPRIA</span><span>✦</span>
+  </div>
+</div>
+
+<section id="produtos" style="padding:110px 40px;max-width:1200px;margin:0 auto">
+  <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#AE567C;margin:0 0 12px">PRODUTOS</p>
+  <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:600;margin:0 0 56px;max-width:20ch">O que fazemos para a sua equipe</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px">
+    <div data-tilt="" data-reveal="" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(43,26,34,0.08);transition:transform .25s ease,box-shadow .25s ease;will-change:transform">
+      <div style="height:220px;background:repeating-linear-gradient(-45deg,#F6E6EA 0 14px,#FBF6F4 14px 28px);display:flex;align-items:center;justify-content:center"><span style="font-family:monospace;font-size:12px;color:#8C3F63;background:rgba(255,255,255,.7);padding:6px 12px;border-radius:6px">foto: camiseta de malha</span></div>
+      <div style="padding:28px">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;margin:0 0 10px;font-weight:600">Camiseta de malha</h3>
+        <p style="margin:0 0 16px;color:#5C4450;line-height:1.55;font-size:15px">Conforto para o dia a dia da equipe, pronta para receber sua identidade.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">com/sem faixa refletiva</span>
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">manga longa ou curta</span>
+        </div>
+      </div>
+    </div>
+    <div data-tilt="" data-reveal="" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(43,26,34,0.08);transition:transform .25s ease,box-shadow .25s ease;will-change:transform">
+      <div style="height:220px;background:repeating-linear-gradient(-45deg,#F6E6EA 0 14px,#FBF6F4 14px 28px);display:flex;align-items:center;justify-content:center"><span style="font-family:monospace;font-size:12px;color:#8C3F63;background:rgba(255,255,255,.7);padding:6px 12px;border-radius:6px">foto: camisa social</span></div>
+      <div style="padding:28px">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;margin:0 0 10px;font-weight:600">Camisa social</h3>
+        <p style="margin:0 0 16px;color:#5C4450;line-height:1.55;font-size:15px">Tricoline com elastano: caimento impecável e liberdade de movimento.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">tricoline + elastano</span>
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">manga longa ou curta</span>
+        </div>
+      </div>
+    </div>
+    <div data-tilt="" data-reveal="" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(43,26,34,0.08);transition:transform .25s ease,box-shadow .25s ease;will-change:transform">
+      <div style="height:220px;background:repeating-linear-gradient(-45deg,#F6E6EA 0 14px,#FBF6F4 14px 28px);display:flex;align-items:center;justify-content:center"><span style="font-family:monospace;font-size:12px;color:#8C3F63;background:rgba(255,255,255,.7);padding:6px 12px;border-radius:6px">foto: jaleco de brim</span></div>
+      <div style="padding:28px">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;margin:0 0 10px;font-weight:600">Jaleco de brim</h3>
+        <p style="margin:0 0 16px;color:#5C4450;line-height:1.55;font-size:15px">100% algodão, resistente para indústria, laboratório e campo.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">aberto ou fechado</span>
+          <span style="font-size:12px;font-weight:700;background:#F6E6EA;color:#8C3F63;padding:6px 12px;border-radius:999px">com/sem faixa refletiva</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="processo" style="background:#fff;padding:110px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#AE567C;margin:0 0 12px">PERSONALIZAÇÃO</p>
+    <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:600;margin:0 0 20px">Sua marca em cada peça</h2>
+    <div data-reveal="" style="display:flex;align-items:center;gap:14px;margin-bottom:56px">
+      <svg width="120" height="64" viewBox="0 0 120 64" style="flex-shrink:0"><path d="M6 50 H114" stroke="#E1ADB1" stroke-width="3" stroke-dasharray="5 6" stroke-linecap="round" style="animation:stitchmove 1.1s linear infinite"></path><g style="animation:needle 1.1s ease-in-out infinite"><line x1="60" y1="6" x2="60" y2="38" stroke="#8C3F63" stroke-width="3.5" stroke-linecap="round"></line><circle cx="60" cy="31" r="3.5" fill="#fff" stroke="#8C3F63" stroke-width="2"></circle></g></svg>
+      <p style="margin:0;color:#5C4450;font-size:17px;max-width:56ch;line-height:1.6">Do desenho à entrega, tudo acontece na nossa confecção em Rio Verde.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px">
+      <div data-reveal="" style="border-top:3px solid #E1ADB1;padding-top:24px">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#E1ADB1;font-weight:600">01</span>
+        <h3 style="font-size:19px;margin:10px 0 8px">Você envia a logo</h3>
+        <p style="margin:0;color:#5C4450;line-height:1.55;font-size:15px">Recebemos sua arte pelo WhatsApp e ajudamos a definir cores, tamanhos e tecidos.</p>
+      </div>
+      <div data-reveal="" style="border-top:3px solid #E1ADB1;padding-top:24px">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#E1ADB1;font-weight:600">02</span>
+        <h3 style="font-size:19px;margin:10px 0 8px">Bordado ou sublimação</h3>
+        <p style="margin:0;color:#5C4450;line-height:1.55;font-size:15px">Bordamos sua logo com acabamento premium ou aplicamos sublimação em cores vivas.</p>
+      </div>
+      <div data-reveal="" style="border-top:3px solid #E1ADB1;padding-top:24px">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#E1ADB1;font-weight:600">03</span>
+        <h3 style="font-size:19px;margin:10px 0 8px">Entrega em Rio Verde</h3>
+        <p style="margin:0;color:#5C4450;line-height:1.55;font-size:15px">Peças prontas no prazo combinado, com a qualidade conferida uma a uma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clientes" style="padding:110px 40px;max-width:1100px;margin:0 auto">
+  <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#AE567C;margin:0 0 12px">CLIENTES</p>
+  <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:600;margin:0 0 16px">Quem já veste com a gente</h2>
+  <p data-reveal="" style="color:#5C4450;font-size:17px;margin:0 0 48px;max-width:56ch;line-height:1.6">Empresas de Rio Verde e região que confiam seus uniformes à Dias de Moda.</p>
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px">
+    <a href="https://www.perfilepis.com.br/" target="_blank" style="background:#fff;border:1px solid rgba(174,86,124,.18);border-radius:16px;padding:28px 20px;text-align:center;font-weight:700;color:#2B1A22;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;align-items:center" style-hover="transform:translateY(-4px);box-shadow:0 12px 30px rgba(174,86,124,.18);color:#2B1A22"><span style="font-size:17px">Perfil EPIs</span><span style="font-size:12px;color:#AE567C;font-weight:500">equipamentos de proteção</span></a>
+    <a href="https://www.portilho.com.br/" target="_blank" style="background:#fff;border:1px solid rgba(174,86,124,.18);border-radius:16px;padding:28px 20px;text-align:center;font-weight:700;color:#2B1A22;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;align-items:center" style-hover="transform:translateY(-4px);box-shadow:0 12px 30px rgba(174,86,124,.18);color:#2B1A22"><span style="font-size:17px">Portilho</span><span style="font-size:12px;color:#AE567C;font-weight:500">varejo</span></a>
+    <a href="https://www.instagram.com/planethair.oficial/" target="_blank" style="background:#fff;border:1px solid rgba(174,86,124,.18);border-radius:16px;padding:28px 20px;text-align:center;font-weight:700;color:#2B1A22;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;align-items:center" style-hover="transform:translateY(-4px);box-shadow:0 12px 30px rgba(174,86,124,.18);color:#2B1A22"><span style="font-size:17px">Planet Hair</span><span style="font-size:12px;color:#AE567C;font-weight:500">beleza</span></a>
+    <a href="http://www.verc.com.br/construtora/index.php#aempresa" target="_blank" style="background:#fff;border:1px solid rgba(174,86,124,.18);border-radius:16px;padding:28px 20px;text-align:center;font-weight:700;color:#2B1A22;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;align-items:center" style-hover="transform:translateY(-4px);box-shadow:0 12px 30px rgba(174,86,124,.18);color:#2B1A22"><span style="font-size:17px">VERC Construtora</span><span style="font-size:12px;color:#AE567C;font-weight:500">construção civil</span></a>
+    <a href="https://agrosolucoesbr.com.br/" target="_blank" style="background:#fff;border:1px solid rgba(174,86,124,.18);border-radius:16px;padding:28px 20px;text-align:center;font-weight:700;color:#2B1A22;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;align-items:center" style-hover="transform:translateY(-4px);box-shadow:0 12px 30px rgba(174,86,124,.18);color:#2B1A22"><span style="font-size:17px">Agro Soluções BR</span><span style="font-size:12px;color:#AE567C;font-weight:500">agronegócio</span></a>
+  </div>
+</section>
+
+<section id="sobre" style="background:#2B1A22;color:#FBF6F4;padding:110px 40px">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
+    <div>
+      <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#E1ADB1;margin:0 0 12px">QUEM FAZ</p>
+      <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,54px);font-weight:600;margin:0 0 8px;color:#fff">Alessandra Dias</h2>
+      <p data-reveal="" style="letter-spacing:3px;font-size:13px;font-weight:700;color:#E1ADB1;margin:0 0 24px">25 ANOS DE EXPERIÊNCIA EM COSTURA</p>
+      <p data-reveal="" style="line-height:1.7;color:#E8D3D9;font-size:17px;margin:0 0 18px">À frente da Dias de Moda Uniformes está Alessandra, costureira há 25 anos. Cada peça que sai do ateliê em Rio Verde passa pelas mãos dela — do corte ao bordado final.</p>
+      <p data-reveal="" style="line-height:1.7;color:#E8D3D9;font-size:17px;margin:0 0 28px">Empresas de todos os portes, do agronegócio ao salão de beleza, com prazo combinado e qualidade conferida uma a uma.</p>
+      <a data-reveal="" href="https://wa.me/556499431610?text=Olá Alessandra! Quero um orçamento de uniformes." target="_blank" style="display:inline-block;border:2px solid #E1ADB1;color:#E1ADB1;padding:14px 30px;border-radius:999px;font-weight:700;font-size:15px" style-hover="background:#E1ADB1;color:#2B1A22">Falar com a Alessandra</a>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div style="width:320px;height:400px;border-radius:160px 160px 24px 24px;background:repeating-linear-gradient(-45deg,rgba(225,173,177,.18) 0 14px,rgba(225,173,177,.06) 14px 28px);display:flex;align-items:center;justify-content:center;animation:floaty 6s ease-in-out infinite;border:1px solid rgba(225,173,177,.3)">
+        <span style="font-family:monospace;font-size:12px;color:#E1ADB1;background:rgba(43,26,34,.6);padding:6px 12px;border-radius:6px;text-align:center">persona 3D: Alessandra<br>(aguardando arquivo)</span>
+      </div>
+      <span style="font-size:13px;color:#8C6B77;font-family:monospace">espaço reservado para a persona 3D</span>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" style="padding:110px 40px;max-width:1100px;margin:0 auto">
+  <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#AE567C;margin:0 0 12px">DEPOIMENTOS</p>
+  <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:600;margin:0 0 56px">O que dizem nossos clientes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px">
+    <figure data-reveal="" style="margin:0;background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 40px rgba(43,26,34,.07)">
+      <blockquote style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;line-height:1.5">“O bordado ficou idêntico à nossa logo. A equipe toda elogiou o caimento.”</blockquote>
+      <figcaption style="font-size:14px;color:#8C3F63;font-weight:700">Cliente · Rio Verde</figcaption>
+    </figure>
+    <figure data-reveal="" style="margin:0;background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 40px rgba(43,26,34,.07)">
+      <blockquote style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;line-height:1.5">“Jalecos resistentes e entregues no prazo. Já é o terceiro pedido que fazemos.”</blockquote>
+      <figcaption style="font-size:14px;color:#8C3F63;font-weight:700">Cliente · Rio Verde</figcaption>
+    </figure>
+    <figure data-reveal="" style="margin:0;background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 40px rgba(43,26,34,.07)">
+      <blockquote style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;line-height:1.5">“Atendimento direto pelo WhatsApp facilitou tudo, da arte à entrega.”</blockquote>
+      <figcaption style="font-size:14px;color:#8C3F63;font-weight:700">Cliente · Rio Verde</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="faq" style="background:#fff;padding:110px 40px">
+  <div style="max-width:800px;margin:0 auto">
+    <p data-reveal="" style="letter-spacing:6px;font-size:12px;font-weight:700;color:#AE567C;margin:0 0 12px">FAQ</p>
+    <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:600;margin:0 0 48px">Perguntas frequentes</h2>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <details data-reveal="" style="border:1px solid rgba(174,86,124,.2);border-radius:14px;padding:20px 24px;background:#FBF6F4">
+        <summary style="cursor:pointer;font-weight:700;font-size:17px;list-style:none">Qual a quantidade mínima por pedido?</summary>
+        <p style="margin:14px 0 0;color:#5C4450;line-height:1.6">Atendemos desde pequenas equipes até grandes pedidos. Fale conosco no WhatsApp e montamos a melhor condição para o seu volume.</p>
+      </details>
+      <details data-reveal="" style="border:1px solid rgba(174,86,124,.2);border-radius:14px;padding:20px 24px;background:#FBF6F4">
+        <summary style="cursor:pointer;font-weight:700;font-size:17px;list-style:none">Preciso ter a arte pronta da minha logo?</summary>
+        <p style="margin:14px 0 0;color:#5C4450;line-height:1.6">Não. Se você tiver apenas uma foto ou referência, nós preparamos a arte para bordado ou sublimação.</p>
+      </details>
+      <details data-reveal="" style="border:1px solid rgba(174,86,124,.2);border-radius:14px;padding:20px 24px;background:#FBF6F4">
+        <summary style="cursor:pointer;font-weight:700;font-size:17px;list-style:none">Qual a diferença entre bordado e sublimação?</summary>
+        <p style="margin:14px 0 0;color:#5C4450;line-height:1.6">O bordado é costurado na peça, com relevo e alta durabilidade — ideal para logos. A sublimação imprime no tecido com cores vivas — ideal para estampas grandes e detalhadas.</p>
+      </details>
+      <details data-reveal="" style="border:1px solid rgba(174,86,124,.2);border-radius:14px;padding:20px 24px;background:#FBF6F4">
+        <summary style="cursor:pointer;font-weight:700;font-size:17px;list-style:none">Vocês entregam fora de Rio Verde?</summary>
+        <p style="margin:14px 0 0;color:#5C4450;line-height:1.6">Sim, enviamos para todo o estado de Goiás. Consulte prazos e frete pelo WhatsApp.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#2B1A22;color:#F0D4DA;padding:90px 40px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;margin-bottom:64px">
+      <div>
+        <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:600;margin:0 0 16px;color:#fff">Vamos vestir a sua equipe?</h2>
+        <p data-reveal="" style="margin:0;color:#E8D3D9;font-size:17px;line-height:1.6">Envie sua logo e receba o orçamento no mesmo dia.</p>
+      </div>
+      <div data-reveal="" style="display:flex;justify-content:flex-end">
+        <a href="https://wa.me/556499431610?text=Olá! Quero um orçamento de uniformes." target="_blank" style="background:#AE567C;color:#fff;padding:20px 40px;border-radius:999px;font-weight:700;font-size:18px;box-shadow:0 12px 30px rgba(174,86,124,.4)" style-hover="background:#C2708F;color:#fff">+55 64 9943-1610</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(225,173,177,.25);padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;flex-direction:column;line-height:1.2">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;color:#fff">DIAS DE MODA</span>
+        <span style="font-size:10px;letter-spacing:5px;color:#E1ADB1;font-weight:700">UNIFORMES</span>
+      </div>
+      <div style="display:flex;gap:24px;font-size:14px">
+        <a href="https://www.instagram.com/diasdemoda.ale" target="_blank" style="color:#E1ADB1" style-hover="color:#fff">@diasdemoda.ale</a>
+        <span style="color:#8C6B77">Rio Verde · GO · enviamos para todo o Goiás</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ mostrarWhats }}" hint-placeholder-val="{{ true }}">
+  <a href="https://wa.me/556499431610?text=Olá! Quero um orçamento de uniformes." target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.45);color:#fff;font-weight:700;font-size:12px;letter-spacing:.5px" style-hover="transform:scale(1.08);color:#fff" title="WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.9 5 2.3 7L4 29l7.3-2.2c1.9 1 4 1.6 6.2 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.1 1.2 1.2-3.9-.3-.4c-1.2-1.7-1.9-3.7-1.9-5.8C5 9.4 9.9 4.8 16 4.8s11 4.6 11 10.1-4.9 9.7-11 9.7zm5.6-7.2c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"></path></svg>
+  </a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarWhats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportamento&quot;},&quot;animacoes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportamento&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.cleanup = [];
+    if (!(this.props.animacoes ?? true)) return;
+    const ease = 'cubic-bezier(.22,1,.36,1)';
+    const revealEls = [...document.querySelectorAll('[data-reveal]')];
+    revealEls.forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(28px)';
+      el.style.transition = `opacity .9s ${ease}, transform .9s ${ease}`;
+    });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this.cleanup.push(() => io.disconnect());
+    // Fallback: reveal anything already in view now, and force-reveal all after 1.5s if IO never fires
+    const inView = () => revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) show(el);
+    });
+    requestAnimationFrame(() => setTimeout(inView, 60));
+    const failsafe = setTimeout(() => revealEls.forEach(show), 1500);
+    this.cleanup.push(() => clearTimeout(failsafe));
+    const onScroll = () => {
+      const y = window.scrollY || (document.scrollingElement ? document.scrollingElement.scrollTop : 0);
+      inView();
+      document.querySelectorAll('[data-scissor]').forEach(el => { el.style.transform = `rotate(${y * 0.25}deg)`; });
+      document.querySelectorAll('[data-parallax]').forEach(el => { el.style.translate = `0 ${y * parseFloat(el.dataset.parallax)}px`; });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    this.cleanup.push(() => { window.removeEventListener('scroll', onScroll); document.removeEventListener('scroll', onScroll); });
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      const mv = e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5, yy = (e.clientY - r.top) / r.height - .5;
+        card.style.transform = `perspective(800px) rotateY(${x * 9}deg) rotateX(${-yy * 9}deg) translateY(-4px)`;
+        card.style.boxShadow = '0 24px 50px rgba(43,26,34,.16)';
+      };
+      const lv = () => { card.style.transform = 'none'; card.style.boxShadow = ''; };
+      card.addEventListener('mousemove', mv); card.addEventListener('mouseleave', lv);
+      this.cleanup.push(() => { card.removeEventListener('mousemove', mv); card.removeEventListener('mouseleave', lv); });
+    });
+  }
+  componentWillUnmount() { (this.cleanup || []).forEach(f => f()); }
+  renderVals() {
+    return { mostrarWhats: this.props.mostrarWhats ?? true };
+  }
+}
+</script>
+</body>
+</html>

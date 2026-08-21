@@ -1,0 +1,11 @@
+# dependências e builds
+node_modules/
+dist/
+.vite/
+
+# sistema
+.DS_Store
+*.local
+
+# arquivo redundante (duplicata compactada da própria pasta Designer/Web)
+Designer/Web/Website de uniformes com animações.zip
