@@ -4,66 +4,32 @@ Copie e cole cada campo abaixo no perfil **@diasdemoda.ale**.
 
 ---
 
-## 1. Nome do perfil (campo em negrito, aparece nos resultados de busca)
-
-Escolha uma (máx. 30 caracteres):
-
-- `Dias de Moda | Uniformes` ← recomendado
-- `Uniformes Personalizados GO`
-- `Dias de Moda Uniformes`
-
----
-
-## 2. Bio (máx. 150 caracteres)
-
-### Opção A — limpa, sem emoji (alinhada à marca) ✅
+## 1. Nome do perfil (campo em negrito, aparece na busca)
 ```
-Uniformes personalizados com 36 anos de costura.
-Confecção própria em Rio Verde · GO.
-Envio para todo Goiás.
-Orçamento no mesmo dia.
+DIAS DE MODA · Uniformes
 ```
 
-### Opção B — com emoji (mais visual)
+## 2. Bio (texto pronto — 140 caracteres)
 ```
-🧵 36 anos de costura
-👔 Uniformes para qualquer empresa
-📍 Rio Verde · GO → envio para todo Goiás
-👇 Orçamento no mesmo dia
+Uniformes sob medida: pijamas hospitalares, camisetas, polo, jalecos, calças e aventais.
+Rio Verde · GO · todo Goiás
+Orçamento no mesmo dia
 ```
-
-### Opção C — curta e direta
-```
-Uniformes personalizados · 36 anos de costura
-Rio Verde · GO → todo Goiás
-Orçamento no mesmo dia no WhatsApp
-```
-
----
 
 ## 3. Categoria
-- **Loja de roupas** (ou "Empresa de confecção", se disponível)
+- **Vestuário (marca)** — já está correta, mantenha.
 
----
+## 4. Link na bio (substituir o antigo)
+- Coloque o site: `https://diasdemoda.com`
 
-## 4. Link na bio
-Escolha um:
+## 5. Botão de ação
+- **Pedir orçamento** → WhatsApp `https://wa.me/556499431610`
 
-- **WhatsApp direto:** `https://wa.me/556499431610`
-- **Site:** `https://diasdemoda.com`
+## 6. O que REMOVER do perfil
+- ❌ O link antigo do WhatsApp (`api.whatsapp.com/message/...`) — formato inválido, troque pelo `wa.me/556499431610` acima.
+- ❌ O link do Facebook — remova (não usa mais).
+- ❌ O endereço completo (Residencial Veneza...) — deixe só "Rio Verde · GO" na bio (privacidade + mais limpo).
 
-> Dica: se quiser vários links (site + WhatsApp + catálogo), use o próprio campo de link do Instagram ou um link na bio (ex.: Linktree/Bio.site).
-
----
-
-## 5. Botões de ação (perfil profissional)
-- **Botão 1:** `Pedir orçamento` → WhatsApp (+55 64 9943-1610)
-- **Botão 2 (opcional):** `Fazer pedido` → WhatsApp
-
----
-
-## 6. Dicas rápidas
-- Deixe o **WhatsApp sempre visível** (é o seu canal de venda).
-- Use as palavras-chave **"uniformes"**, **"personalizados"** e **"Goiás"** — ajudam a aparecer na busca.
-- O campo **Nome** (item 1) é o que mais pesa na busca do Instagram; use a versão recomendada.
-- Atualize a bio com a **promoção/novidade do momento** (ex.: "agenda de produção aberta").
+## 7. Dicas
+- O link da bio aponta para o **site** (diasdemoda.com); o **WhatsApp** fica no botão de ação.
+- Palavras-chave na bio e no nome ajudam a aparecer na busca: "uniformes", "pijamas", "jalecos", "Rio Verde", "Goiás".
