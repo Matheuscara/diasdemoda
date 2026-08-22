@@ -98,7 +98,7 @@ async function main() {
 
   const chromium = await getChromium();
   const browser = await chromium.launch({ args: ['--no-sandbox'] });
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
   await page.goto('file://' + htmlPath, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: pngPath });

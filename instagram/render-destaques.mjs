@@ -22,7 +22,7 @@ const files = collectHtml(BASE);
 const run = async () => {
   const browser = await chromium.launch({ args: ['--no-sandbox'] });
   for (const file of files) {
-    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 2 });
     await page.goto('file://' + file, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     const png = file.replace(/\.html$/, '.png');

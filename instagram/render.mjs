@@ -37,7 +37,7 @@ const run = async () => {
   for (const post of POSTS) {
     const page = await browser.newPage({
       viewport: { width: 1080, height: 1350 },
-      deviceScaleFactor: 1,
+      deviceScaleFactor: 2,
     });
     await page.goto('file://' + join(POSTS_DIR, post.html), { waitUntil: 'networkidle' });
     // Garante que as fontes (Cormorant Garamond / Karla) terminaram de carregar

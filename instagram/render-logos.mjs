@@ -13,7 +13,7 @@ const LOGOS = [
 const run = async () => {
   const browser = await chromium.launch({ args: ['--no-sandbox'] });
   for (const logo of LOGOS) {
-    const page = await browser.newPage({ viewport: { width: logo.w, height: logo.h }, deviceScaleFactor: 1 });
+    const page = await browser.newPage({ viewport: { width: logo.w, height: logo.h }, deviceScaleFactor: 2 });
     await page.goto('file://' + join(LOGO_DIR, logo.html), { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: join(LOGO_DIR, logo.png), omitBackground: true });
