@@ -1,4 +1,4 @@
-// Renderiza os posts do Instagram (HTML -> PNG 1080x1080) usando Playwright.
+// Renderiza os posts do Instagram (HTML -> PNG 1080x1350, proporção 4:5) usando Playwright.
 // Uso: node render.mjs  (a partir de /home/matt/diasdemoda/instagram)
 import { chromium } from '/home/matt/diasdemoda/.tools/print/node_modules/playwright/index.mjs';
 import { fileURLToPath } from 'node:url';
@@ -36,7 +36,7 @@ const run = async () => {
 
   for (const post of POSTS) {
     const page = await browser.newPage({
-      viewport: { width: 1080, height: 1080 },
+      viewport: { width: 1080, height: 1350 },
       deviceScaleFactor: 1,
     });
     await page.goto('file://' + join(POSTS_DIR, post.html), { waitUntil: 'networkidle' });

@@ -54,7 +54,7 @@ function renderHtml(item) {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { width:1080px; height:1080px; background:${t.bg}; font-family:'Karla',sans-serif; color:${t.texto}; overflow:hidden; position:relative; }
+  body { width:1080px; height:1350px; background:${t.bg}; font-family:'Karla',sans-serif; color:${t.texto}; overflow:hidden; position:relative; }
   .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, ${t.orb} 0%, transparent 70%); }
   .orb-a { width:720px; height:720px; top:-300px; right:-220px; }
   .orb-b { width:560px; height:560px; bottom:-240px; left:-180px; }
@@ -98,7 +98,7 @@ async function main() {
 
   const chromium = await getChromium();
   const browser = await chromium.launch({ args: ['--no-sandbox'] });
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1080 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   await page.goto('file://' + htmlPath, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: pngPath });
