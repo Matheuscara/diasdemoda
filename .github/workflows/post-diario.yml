@@ -1,0 +1,40 @@
+name: Post diário do Instagram
+
+on:
+  schedule:
+    # 12:00 UTC = 09:00 (horário de Brasília)
+    - cron: '0 12 * * *'
+  workflow_dispatch: {}   # permite rodar manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar Playwright e Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+
+      - name: Gerar o post do dia
+        run: node instagram/diario/generate.mjs
+
+      - name: Commit e push do post gerado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add instagram/diario/saida/
+          if git diff --cached --quiet; then
+            echo "Nada novo para commitar."
+          else
+            git commit -m "chore(diario): post do dia $(date -u +%F)"
+            git push
+          fi

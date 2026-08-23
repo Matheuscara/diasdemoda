@@ -1,7 +1,7 @@
 # Dias de Moda Uniformes
 
 Site institucional da **Dias de Moda Uniformes** — confecção de uniformes em Rio Verde · GO,
-comandada por Alessandra Dias (25 anos de costura). Uma página, estática, com tesoura 3D
+comandada por Alessandra Dias (36 anos de costura). Uma página, estática, com tesoura 3D
 (Three.js), animações (GSAP + Lenis) e textura de malha interativa.
 
 🔗 Produção: **https://diasdemoda.com**

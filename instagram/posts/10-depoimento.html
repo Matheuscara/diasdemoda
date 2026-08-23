@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+
+  :root {
+    --rosa: #AE567C; --rosa-escuro: #8C3F63; --rosa-claro: #E1ADB1;
+    --ameixa: #2B1A22; --ameixa-suave: #C9B8C0; --branco: #FBF6F4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; background: var(--ameixa);
+    font-family: 'Karla', 'Helvetica Neue', sans-serif; color: var(--branco);
+    overflow: hidden; position: relative; }
+  .orb { position: absolute; border-radius: 50%; z-index: 0;
+    background: radial-gradient(circle, rgb(174 86 124 / 0.34) 0%, rgb(174 86 124 / 0) 70%); }
+  .orb-a { width: 720px; height: 720px; top: -280px; right: -200px; }
+  .orb-b { width: 560px; height: 560px; bottom: -240px; left: -160px; }
+
+  .frame { position: relative; z-index: 1; height: 100%; padding: 84px 88px;
+    display: flex; flex-direction: column; }
+  .label { font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px;
+    letter-spacing: 6px; text-transform: uppercase; color: var(--rosa-claro); }
+  .stitch { height: 4px; width: 100%; border-radius: 999px; margin-top: 14px;
+    background-image: repeating-linear-gradient(90deg, var(--rosa-claro) 0 7px, transparent 7px 16px); }
+
+  .quote-mark { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+    font-size: 130px; line-height: 0.6; color: var(--rosa); margin-top: 70px; }
+
+  .quote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 56px; line-height: 1.2; color: var(--branco);
+    margin-top: 40px; max-width: 820px; }
+
+  .author { margin-top: 40px; font-size: 22px; font-weight: 700; color: var(--rosa-claro); }
+
+  .cta-row { margin-top: auto; display: flex; align-items: center; gap: 24px; }
+  .pill { display: inline-flex; align-items: center; background: var(--rosa); color: #fff;
+    font-weight: 700; font-size: 22px; padding: 22px 38px; border-radius: 999px; }
+  .phone { font-size: 19px; color: var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div>
+      <div class="label">Clientes</div>
+      <div class="stitch"></div>
+    </div>
+    <div class="quote-mark">“</div>
+    <div class="quote">Os uniformes chegaram no prazo e a qualidade surpreendeu a equipe inteira.</div>
+    <div class="author">Cliente em Goiânia · GO</div>
+    <div class="cta-row">
+      <div class="pill">Pedir orçamento no WhatsApp</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>

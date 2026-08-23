@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  :root { --rosa:#AE567C; --rosa-escuro:#8C3F63; --rosa-claro:#E1ADB1; --ameixa:#2B1A22; --ameixa-suave:#C9B8C0; --branco:#FBF6F4; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:var(--ameixa); font-family:'Karla','Helvetica Neue',sans-serif; color:var(--branco); overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(174 86 124 / 0.34) 0%, rgb(174 86 124 / 0) 70%); }
+  .orb-a { width:700px; height:700px; top:-280px; right:-200px; }
+  .orb-b { width:540px; height:540px; bottom:-220px; left:-160px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:var(--rosa-claro); }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, var(--rosa-claro) 0 7px, transparent 7px 16px); }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:78px; line-height:1.02; color:var(--branco); margin-top:46px; }
+  .sub { font-size:26px; font-weight:500; color:var(--ameixa-suave); margin-top:26px; line-height:1.45; max-width:760px; }
+  .steps { margin-top:48px; display:flex; flex-direction:column; gap:24px; }
+  .step { display:flex; align-items:center; gap:24px; }
+  .mark { flex:0 0 58px; height:58px; border-radius:50%; background:var(--rosa); color:#fff; font-size:28px; display:flex; align-items:center; justify-content:center; }
+  .step-title { font-size:26px; font-weight:700; color:var(--branco); }
+  .step-sub { font-size:19px; color:var(--ameixa-suave); margin-top:3px; }
+  .cta-row { margin-top:auto; display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:var(--rosa); color:#fff; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; }
+  .phone { font-size:19px; color:var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">Garantia</div><div class="stitch"></div></div>
+    <div class="headline">Você aprova a amostra<br>antes da produção.</div>
+    <div class="sub">Sem surpresa no final: você vê a peça pronta e só então a gente produz o lote inteiro.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="mark">1</div>
+        <div><div class="step-title">Produzimos uma amostra</div><div class="step-sub">Com o tecido, a logo e o acabamento combinados.</div></div>
+      </div>
+      <div class="step">
+        <div class="mark">2</div>
+        <div><div class="step-title">Você aprova</div><div class="step-sub">Confere a peça e pede ajustes se precisar.</div></div>
+      </div>
+      <div class="step">
+        <div class="mark">3</div>
+        <div><div class="step-title">Produzimos o lote</div><div class="step-sub">Com a qualidade já aprovada por você.</div></div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Pedir minha amostra</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>

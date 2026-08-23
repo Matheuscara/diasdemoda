@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Karla:wght@700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { background: #2B1A22; }
+  body {
+    width: 1200px; height: 1200px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Karla', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  /* brilho sutil no topo */
+  body::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 20%, rgb(174 86 124 / 0.28) 0%, transparent 60%);
+  }
+  .lockup { position: relative; text-align: center; }
+  .name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 132px;
+    letter-spacing: 0.06em;
+    color: #FBF6F4;
+    line-height: 1;
+  }
+  .sub {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    color: #AE567C;
+    margin-top: 26px;
+    text-indent: 18px;
+  }
+  .stitch {
+    width: 230px; height: 5px; border-radius: 999px;
+    background-image: repeating-linear-gradient(90deg, #E1ADB1 0 14px, transparent 14px 30px);
+    margin: 32px auto 0;
+  }
+</style>
+</head>
+<body>
+  <div class="lockup">
+    <div class="name">DIAS DE MODA</div>
+    <div class="sub">Uniformes</div>
+    <div class="stitch"></div>
+  </div>
+</body>
+</html>

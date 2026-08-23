@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════════════
+                    📄 LEIA-ME PRIMEIRO 📄
+═══════════════════════════════════════════════════════════════════
+
+
+OLÁ! 👋
+
+
+Você tem 2 arquivos prontos para imprimir:
+
+
+1️⃣  folheto-6up.html
+    → Abre no navegador
+    → Ctrl + P para imprimir
+    → 6 folhetos saem em 1 folha A4
+    → Depois é só cortar!
+
+
+2️⃣  cartao-duplex.html  
+    → Abre no navegador
+    → Ctrl + P para imprimir
+    → Cartão de visita com cupom
+    → Frente e verso
+
+
+⚠️  IMPORTANTE:
+    
+    Quando apertar Ctrl + P, MARQUE a opção:
+    
+    ✅  "Cores de fundo"  ou  "Gráficos de fundo"
+    
+    (Se não marcar, as cores e o QR Code somem!)
+
+
+═══════════════════════════════════════════════════════════════════
+
+
+PRECISA DE AJUDA?
+
+Abra este arquivo:  🚀-COMECE-AQUI.txt
+
+
+═══════════════════════════════════════════════════════════════════

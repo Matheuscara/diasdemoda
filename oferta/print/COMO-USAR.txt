@@ -1,0 +1,105 @@
+═══════════════════════════════════════════════════════════
+   📄 COMO IMPRIMIR OS MATERIAIS - DIAS DE MODA
+═══════════════════════════════════════════════════════════
+
+🎯 FOLHETO (6 por folha A4)
+───────────────────────────────────────────────────────────
+
+Arquivo: folheto-6up.html
+
+1. Abra o arquivo no Chrome ou Edge
+2. Aperte Ctrl + P (imprimir)
+3. Configure:
+   
+   ✅ Cores de fundo: ATIVADO ⚠️ IMPORTANTE!
+   ✅ Tamanho: A4
+   ✅ Orientação: Retrato (vertical)
+   ✅ Margem: Nenhuma
+   ✅ Escala: 100%
+
+4. Você verá 2 páginas:
+   
+   Página 1 = FRENTE dos 6 folhetos
+   Página 2 = VERSO dos 6 folhetos
+
+5. Imprima assim:
+   
+   a) Imprima só a página 1
+   b) Pegue o papel impresso
+   c) Vire o papel (coloque de volta na impressora)
+   d) Imprima só a página 2
+   e) Corte os 6 folhetos nos espaços!
+
+Layout da folha:
+┌─────────────────────────────┐
+│  folheto  │  folheto  │  folheto  │
+│     1     │     2     │     3     │
+├───────────┼───────────┼───────────┤
+│  folheto  │  folheto  │  folheto  │
+│     4     │     5     │     6     │
+└─────────────────────────────┘
+
+
+🎴 CARTÃO (frente e verso)
+───────────────────────────────────────────────────────────
+
+Arquivo: cartao-duplex.html
+
+1. Abra o arquivo no Chrome ou Edge
+2. Aperte Ctrl + P (imprimir)
+3. Configure:
+   
+   ✅ Cores de fundo: ATIVADO ⚠️ IMPORTANTE!
+   ✅ Tamanho: 85mm × 55mm (ou A4 e cortar)
+   ✅ Orientação: Paisagem (horizontal)
+   ✅ Margem: Nenhuma
+   ✅ Escala: 100%
+
+4. Você verá 2 páginas:
+   
+   Página 1 = FRENTE do cartão
+   Página 2 = VERSO do cartão
+
+5. Imprima frente, vire o papel, imprima verso
+
+
+💾 SALVAR COMO PDF (para levar na gráfica)
+───────────────────────────────────────────────────────────
+
+1. Abra o arquivo HTML no Chrome
+2. Ctrl + P
+3. Em "Destino", escolha "Salvar como PDF"
+4. Configure as mesmas opções acima
+5. Salve o PDF
+6. Leve para a gráfica
+
+
+❗ IMPORTANTE
+───────────────────────────────────────────────────────────
+
+→ SEMPRE ative "Cores de fundo" ou "Gráficos de fundo"
+  (senão o QR Code e as cores não vão aparecer!)
+
+→ Margens devem estar em "Nenhuma"
+
+→ Escala deve estar em 100%
+
+→ Não use os arquivos folheto.html e cartao.html sozinhos
+  (use os -6up e -duplex que são otimizados!)
+
+
+✂️ DEPOIS DE IMPRIMIR O FOLHETO
+───────────────────────────────────────────────────────────
+
+Use uma régua e estilete (ou tesoura) para cortar os 6
+folhetos nos espaços entre eles.
+
+Cada folheto mede aproximadamente 14,8cm × 21cm (A5).
+
+
+📞 DÚVIDAS?
+───────────────────────────────────────────────────────────
+
+Me chama que eu te ajudo! 😊
+
+═══════════════════════════════════════════════════════════

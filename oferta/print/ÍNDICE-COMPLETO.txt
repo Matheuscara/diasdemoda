@@ -1,0 +1,91 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║           📁 ÍNDICE COMPLETO - MATERIAL DE IMPRESSÃO          ║
+║                    Dias de Moda Uniformes                     ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  🎯 ARQUIVOS PARA IMPRIMIR (Use estes!)                     │
+└─────────────────────────────────────────────────────────────┘
+
+  📄 folheto-6up.html
+     → 6 folhetos A5 em 1 folha A4
+     → Econômico e prático
+     → Frente: Oferta 15% OFF + QR
+     → Verso: Produtos + Contato
+     
+  📄 cartao-duplex.html
+     → Cartão 85×55mm
+     → Frente: Oferta + QR
+     → Verso: Contato Alessandra
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  📖 INSTRUÇÕES (Escolha uma!)                               │
+└─────────────────────────────────────────────────────────────┘
+
+  1️⃣  LEIA-ME-PRIMEIRO.txt
+      → Super rápido (30 segundos)
+      
+  2️⃣  🚀-COMECE-AQUI.txt
+      → Início rápido (2 minutos)
+      
+  3️⃣  COMO-USAR.txt
+      → Passo a passo completo (5 minutos)
+      
+  4️⃣  RESUMO-FINAL.md
+      → Visão geral do projeto
+      
+  5️⃣  README.md
+      → Documentação técnica completa
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  📂 ARQUIVOS TÉCNICOS (Backup)                              │
+└─────────────────────────────────────────────────────────────┘
+
+  folheto.html          → Folheto original (1 por página)
+  cartao.html           → Cartão original (1 por página)
+  qr-folheto.svg/png    → QR Code do folheto
+  qr-cartao.svg/png     → QR Code do cartão
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  ⚡ QUICK START                                             │
+└─────────────────────────────────────────────────────────────┘
+
+  1. Abrir:      folheto-6up.html  ou  cartao-duplex.html
+  2. Apertar:    Ctrl + P
+  3. Marcar:     ✅ "Cores de fundo"
+  4. Imprimir!
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  ⚠️  IMPORTANTE                                             │
+└─────────────────────────────────────────────────────────────┘
+
+  → SEMPRE marque "Cores de fundo" ao imprimir
+  → Use Chrome ou Edge
+  → Margem: Nenhuma
+  → Escala: 100%
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  📊 RESUMO                                                  │
+└─────────────────────────────────────────────────────────────┘
+
+  ✅ 2 arquivos prontos para impressão
+  ✅ 5 documentos de ajuda
+  ✅ Design profissional
+  ✅ QR Codes rastreáveis
+  ✅ Otimizado para economia (6-up)
+  ✅ Pronto para gráfica (salvar como PDF)
+
+
+═══════════════════════════════════════════════════════════════
+
+         Qualquer dúvida, me chama! 😊
+         
+═══════════════════════════════════════════════════════════════

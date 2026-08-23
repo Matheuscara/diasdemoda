@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+
+  :root {
+    --rosa: #AE567C;
+    --rosa-escuro: #8C3F63;
+    --rosa-claro: #E1ADB1;
+    --ameixa: #2B1A22;
+    --ameixa-suave: #5C4450;
+    --branco: #FBF6F4;
+    --superficie: #F6E6EA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background: var(--branco);
+    font-family: 'Karla', 'Helvetica Neue', sans-serif;
+    color: var(--ameixa);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(225 173 177 / 0.5) 0%, rgb(225 173 177 / 0) 70%);
+    z-index: 0;
+  }
+  .orb-a { width: 620px; height: 620px; top: -260px; left: -180px; }
+  .orb-b { width: 560px; height: 560px; bottom: -220px; right: -160px; }
+
+  .frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 84px 88px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--rosa);
+  }
+
+  .stitch {
+    height: 4px;
+    width: 100%;
+    border-radius: 999px;
+    background-image: repeating-linear-gradient(90deg, var(--rosa) 0 7px, transparent 7px 16px);
+    margin-top: 14px;
+  }
+
+  .headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 1.02;
+    color: var(--ameixa);
+    margin-top: 46px;
+  }
+
+  .grid {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: var(--superficie);
+    border-radius: 20px;
+    padding: 30px 26px;
+    box-shadow: 0 10px 26px rgb(174 86 124 / 0.12);
+  }
+  .card-icon {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--rosa);
+    line-height: 1;
+  }
+  .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ameixa);
+    margin-top: 14px;
+    line-height: 1.2;
+  }
+  .card-sub {
+    font-size: 16px;
+    color: var(--ameixa-suave);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .line {
+    margin-top: 38px;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--ameixa-suave);
+  }
+
+  .cta-row {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--rosa);
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 22px 38px;
+    border-radius: 999px;
+    box-shadow: 0 14px 34px rgb(174 86 124 / 0.32);
+  }
+  .phone {
+    font-size: 19px;
+    color: var(--ameixa-suave);
+  }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <div class="frame">
+    <div>
+      <div class="label">O que fazemos</div>
+      <div class="stitch"></div>
+    </div>
+
+    <div class="headline">Uniformes para<br>qualquer empresa.</div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">Empresarial</div>
+        <div class="card-sub">Polo, camisa e camiseta com a sua marca.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">Equipes</div>
+        <div class="card-sub">Atendimento, vendas e prestação de serviço.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">Saúde e estética</div>
+        <div class="card-sub">Clínicas, consultórios, salões e spas.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">Cozinha e indústria</div>
+        <div class="card-sub">Aventais, jalecos e peças para produção.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">Escolas e eventos</div>
+        <div class="card-sub">Turmas, formaturas e uniformes de ocasião.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">✦</div>
+        <div class="card-title">A sua empresa</div>
+        <div class="card-sub">Envie a logo e receba o orçamento no mesmo dia.</div>
+      </div>
+    </div>
+
+    <div class="line">Envie sua logo e receba o orçamento no mesmo dia.</div>
+
+    <div class="cta-row">
+      <div class="pill">Pedir orçamento no WhatsApp</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>

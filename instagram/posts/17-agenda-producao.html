@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  :root { --rosa:#AE567C; --rosa-claro:#E1ADB1; --ameixa:#2B1A22; --ameixa-suave:#C9B8C0; --branco:#FBF6F4; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:var(--ameixa); font-family:'Karla','Helvetica Neue',sans-serif; color:var(--branco); overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(174 86 124 / 0.34) 0%, rgb(174 86 124 / 0) 70%); }
+  .orb-a { width:720px; height:720px; top:-280px; right:-200px; }
+  .orb-b { width:560px; height:560px; bottom:-240px; left:-160px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:var(--rosa-claro); }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, var(--rosa-claro) 0 7px, transparent 7px 16px); }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:80px; line-height:1.02; color:var(--branco); margin-top:46px; }
+  .sub { font-size:26px; font-weight:500; color:var(--ameixa-suave); margin-top:26px; line-height:1.45; max-width:760px; }
+  .bar-row { margin-top:52px; display:flex; align-items:center; gap:20px; }
+  .bar { flex:1; height:26px; border-radius:999px; background:rgb(249 246 244 / 0.12); overflow:hidden; }
+  .bar-fill { height:100%; width:82%; border-radius:999px; background:var(--rosa); }
+  .bar-label { font-size:20px; font-weight:700; color:var(--rosa-claro); white-space:nowrap; }
+  .cta-row { margin-top:auto; display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:var(--rosa); color:#fff; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; }
+  .phone { font-size:19px; color:var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">Vagas limitadas</div><div class="stitch"></div></div>
+    <div class="headline">A agenda de produção<br>deste mês está quase cheia.</div>
+    <div class="sub">Trabalhamos com prazo combinado e poucas vagas por mês para manter a qualidade peça por peça.</div>
+    <div class="bar-row">
+      <div class="bar"><div class="bar-fill"></div></div>
+      <div class="bar-label">82% ocupado</div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Garantir minha vaga</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>

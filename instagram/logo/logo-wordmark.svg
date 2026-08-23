@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=Karla:wght@700&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="800" height="480" fill="none"/>
+
+  <!-- DIAS DE MODA -->
+  <text x="400" y="230" text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, serif" font-weight="700"
+        font-size="140" letter-spacing="10" fill="#2B1A22">DIAS DE MODA</text>
+
+  <!-- UNIFORMES -->
+  <text x="400" y="310" text-anchor="middle"
+        font-family="'Karla', sans-serif" font-weight="700"
+        font-size="36" letter-spacing="18" fill="#AE567C">UNIFORMES</text>
+
+  <!-- linha costurada -->
+  <line x1="300" y1="360" x2="500" y2="360" stroke="#AE567C" stroke-width="5"
+        stroke-dasharray="14 16" stroke-linecap="round"/>
+</svg>

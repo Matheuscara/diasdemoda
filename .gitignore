@@ -3,6 +3,12 @@ node_modules/
 dist/
 .vite/
 
+# ferramentas locais (git instalado em user-space p/ este ambiente)
+.tools/
+
+# prévias geradas automaticamente (screenshots de teste)
+_preview/
+
 # sistema
 .DS_Store
 *.local

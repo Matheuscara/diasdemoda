@@ -1,0 +1,25 @@
+name = "diasdemoda-oferta"
+main = "worker/index.js"
+compatibility_date = "2026-08-20"
+
+# Worker + Static Assets: o Worker atende /api, /leads e reescreve /oferta p/ os assets.
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "none"
+
+# Banco D1: rode "wrangler d1 create diasdemoda-leads" e cole o id gerado aqui.
+[[d1_databases]]
+binding = "DB"
+database_name = "diasdemoda-leads"
+database_id = "2186a179-fcdd-4926-ae06-870d13b9d2b2"
+
+# Rotas no domínio diasdemoda.com. Se o deploy reclamar de conflito com o site
+# principal, adicione-as manualmente em: Workers & Pages → diasdemoda-oferta →
+# Settings → Domains & Routes (as rotas específicas têm prioridade sobre o domínio).
+# routes = [
+#   { pattern = "diasdemoda.com/oferta*", zone_name = "diasdemoda.com" },
+#   { pattern = "diasdemoda.com/api/*", zone_name = "diasdemoda.com" },
+#   { pattern = "diasdemoda.com/leads*", zone_name = "diasdemoda.com" },
+# ]

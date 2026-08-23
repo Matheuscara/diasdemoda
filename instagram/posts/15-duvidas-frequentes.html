@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap');
+  :root { --rosa:#AE567C; --rosa-escuro:#8C3F63; --rosa-claro:#E1ADB1; --ameixa:#2B1A22; --ameixa-suave:#5C4450; --branco:#FBF6F4; --superficie:#F6E6EA; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:var(--branco); font-family:'Karla','Helvetica Neue',sans-serif; color:var(--ameixa); overflow:hidden; position:relative; }
+  .orb { position:absolute; border-radius:50%; z-index:0; background:radial-gradient(circle, rgb(225 173 177 / 0.5) 0%, rgb(225 173 177 / 0) 70%); }
+  .orb-a { width:700px; height:700px; top:-280px; right:-200px; }
+  .orb-b { width:540px; height:540px; bottom:-220px; left:-160px; }
+  .frame { position:relative; z-index:1; height:100%; padding:84px 88px; display:flex; flex-direction:column; }
+  .label { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:6px; text-transform:uppercase; color:var(--rosa); }
+  .stitch { height:4px; width:100%; border-radius:999px; margin-top:14px; background-image:repeating-linear-gradient(90deg, var(--rosa) 0 7px, transparent 7px 16px); }
+  .headline { font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:74px; line-height:1.02; color:var(--ameixa); margin-top:44px; }
+  .faq { margin-top:42px; display:flex; flex-direction:column; gap:18px; }
+  .item { background:var(--superficie); border-radius:18px; padding:24px 28px; }
+  .q { font-size:22px; font-weight:700; color:var(--rosa-escuro); }
+  .a { font-size:19px; color:var(--ameixa-suave); margin-top:6px; line-height:1.4; }
+  .cta-row { margin-top:auto; display:flex; align-items:center; gap:24px; }
+  .pill { display:inline-flex; align-items:center; background:var(--rosa); color:#fff; font-weight:700; font-size:22px; padding:22px 38px; border-radius:999px; box-shadow:0 14px 34px rgb(174 86 124 / 0.32); }
+  .phone { font-size:19px; color:var(--ameixa-suave); }
+</style>
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="frame">
+    <div><div class="label">Dúvidas frequentes</div><div class="stitch"></div></div>
+    <div class="headline">Perguntas que sempre<br>nos fazem.</div>
+    <div class="faq">
+      <div class="item">
+        <div class="q">Tem pedido mínimo?</div>
+        <div class="a">Atendemos desde pequenos lotes até equipes grandes. Fale com a gente.</div>
+      </div>
+      <div class="item">
+        <div class="q">Quanto tempo demora?</div>
+        <div class="a">O prazo é combinado com você antes de fechar, e cumprido.</div>
+      </div>
+      <div class="item">
+        <div class="q">Como personalizo?</div>
+        <div class="a">Você envia a logo e nós aplicamos em bordado ou estampa.</div>
+      </div>
+      <div class="item">
+        <div class="q">Vocês entregam fora de Rio Verde?</div>
+        <div class="a">Sim, enviamos para todo o Goiás.</div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="pill">Tirar outra dúvida no WhatsApp</div>
+      <div class="phone">+55 64 9943-1610</div>
+    </div>
+  </div>
+</body>
+</html>
