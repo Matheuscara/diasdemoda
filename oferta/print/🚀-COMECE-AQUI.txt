@@ -1,0 +1,79 @@
+
+╔═══════════════════════════════════════════════════════╗
+║                                                       ║
+║     🎯  COMECE AQUI - IMPRESSÃO DIAS DE MODA  🎯      ║
+║                                                       ║
+╚═══════════════════════════════════════════════════════╝
+
+
+👋 OLÁ! PRECISA IMPRIMIR OS MATERIAIS?
+
+
+📄 PARA O FOLHETO (6 por folha):
+═══════════════════════════════════════════════════════
+
+1. Dê duplo clique neste arquivo:
+   
+   📁 folheto-6up.html
+   
+2. Ele vai abrir no navegador
+
+3. Aperte CTRL + P (para imprimir)
+
+4. Configure assim:
+   
+   ✅ Marcar "Cores de fundo"  ← IMPORTANTE!
+   ✅ Tamanho: A4
+   ✅ Margem: Nenhuma
+   ✅ Escala: 100%
+
+5. Clique em "Imprimir"
+
+6. Vai sair 1 folha A4 com 6 folhetos
+   (3 em cima, 3 embaixo)
+
+7. Corte nos espaços para separar!
+
+
+🎴 PARA O CARTÃO:
+═══════════════════════════════════════════════════════
+
+1. Dê duplo clique neste arquivo:
+   
+   📁 cartao-duplex.html
+   
+2. Ele vai abrir no navegador
+
+3. Aperte CTRL + P (para imprimir)
+
+4. Configure assim:
+   
+   ✅ Marcar "Cores de fundo"  ← IMPORTANTE!
+   ✅ Orientação: Paisagem (deitado)
+   ✅ Margem: Nenhuma
+   ✅ Escala: 100%
+
+5. Clique em "Imprimir"
+
+
+💡 DICA IMPORTANTE:
+═══════════════════════════════════════════════════════
+
+→ Se as CORES não aparecerem, é porque você
+  esqueceu de MARCAR "Cores de fundo"!
+
+→ Os arquivos já estão prontos para imprimir
+  direto do navegador!
+
+
+📞 PRECISA DE AJUDA?
+═══════════════════════════════════════════════════════
+
+Leia o arquivo:  COMO-USAR.txt
+
+Ou me chama! 😊
+
+
+═══════════════════════════════════════════════════════
+         Dias de Moda • Material de Marketing
+═══════════════════════════════════════════════════════
