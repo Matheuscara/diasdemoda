@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de PDFs - Dias de Moda</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ae567c;
+            margin-top: 0;
+        }
+        .step {
+            background: #fbf6f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #ae567c;
+            border-radius: 5px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #2b1a22;
+        }
+        button {
+            background: #ae567c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #8c3f63;
+        }
+        .important {
+            background: #fff3cd;
+            border-left-color: #ffa500;
+            border: 1px solid #ffa500;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .checklist li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Gerador de PDFs - Dias de Moda</h1>
+        
+        <p><strong>Siga os passos abaixo para gerar os PDFs:</strong></p>
+
+        <div class="step">
+            <h3>1️⃣ Folheto (6 por folha A4)</h3>
+            <button onclick="abrirFolheto()">📄 Abrir Folheto para Imprimir</button>
+            <p>Vai abrir em uma nova aba. Depois:</p>
+            <ol>
+                <li>Aperte <code>Ctrl + P</code></li>
+                <li><strong>Marque</strong> "Cores de fundo" ou "Gráficos de fundo"</li>
+                <li>Destino: <strong>Salvar como PDF</strong></li>
+                <li>Salve como: <code>folheto-6up.pdf</code></li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Cartão (frente e verso)</h3>
+            <button onclick="abrirCartao()">🎴 Abrir Cartão para Imprimir</button>
+            <p>Vai abrir em uma nova aba. Depois:</p>
+            <ol>
+                <li>Aperte <code>Ctrl + P</code></li>
+                <li><strong>Marque</strong> "Cores de fundo" ou "Gráficos de fundo"</li>
+                <li>Destino: <strong>Salvar como PDF</strong></li>
+                <li>Salve como: <code>cartao-duplex.pdf</code></li>
+            </ol>
+        </div>
+
+        <div class="step important">
+            <h3>⚠️ IMPORTANTE!</h3>
+            <ul class="checklist">
+                <li>SEMPRE marque "Cores de fundo"</li>
+                <li>Margem: Nenhuma</li>
+                <li>Escala: 100%</li>
+                <li>Use Chrome ou Edge (Firefox pode dar problema)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>✅ Checklist de Configuração</h3>
+            <p>Quando abrir a janela de impressão, configure assim:</p>
+            <ul class="checklist">
+                <li><strong>Destino:</strong> Salvar como PDF</li>
+                <li><strong>Páginas:</strong> Todas</li>
+                <li><strong>Layout:</strong> Retrato (folheto) / Paisagem (cartão)</li>
+                <li><strong>Cores:</strong> Com cores</li>
+                <li><strong>Margens:</strong> Nenhuma ou Mínimas</li>
+                <li><strong>Opções:</strong> ✅ Cores de fundo</li>
+                <li><strong>Escala:</strong> Padrão (100%)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🎯 Atalhos Rápidos</h3>
+            <button onclick="abrirFolheto()">📄 Folheto</button>
+            <button onclick="abrirCartao()">🎴 Cartão</button>
+        </div>
+    </div>
+
+    <script>
+        function abrirFolheto() {
+            window.open('folheto-6up.html', '_blank');
+            alert('✅ Folheto aberto em nova aba!\n\n1. Aperte Ctrl + P\n2. Marque "Cores de fundo"\n3. Destino: Salvar como PDF\n4. Salve como: folheto-6up.pdf');
+        }
+
+        function abrirCartao() {
+            window.open('cartao-duplex.html', '_blank');
+            alert('✅ Cartão aberto em nova aba!\n\n1. Aperte Ctrl + P\n2. Marque "Cores de fundo"\n3. Destino: Salvar como PDF\n4. Salve como: cartao-duplex.pdf');
+        }
+    </script>
+</body>
+</html>
