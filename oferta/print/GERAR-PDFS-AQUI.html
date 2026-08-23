@@ -80,14 +80,16 @@
         <p><strong>Siga os passos abaixo para gerar os PDFs:</strong></p>
 
         <div class="step">
-            <h3>1️⃣ Folheto (6 por folha A4)</h3>
-            <button onclick="abrirFolheto()">📄 Abrir Folheto para Imprimir</button>
+            <h3>1️⃣ Folheto - Escolha a versão:</h3>
+            <button onclick="abrirFolheto4()">📄 4 por folha (Recomendado)</button>
+            <button onclick="abrirFolheto6()">📄 6 por folha (Economia)</button>
+            <p><strong>Recomendado:</strong> 4 por folha tem mais espaço e o QR Code fica maior!</p>
             <p>Vai abrir em uma nova aba. Depois:</p>
             <ol>
                 <li>Aperte <code>Ctrl + P</code></li>
                 <li><strong>Marque</strong> "Cores de fundo" ou "Gráficos de fundo"</li>
                 <li>Destino: <strong>Salvar como PDF</strong></li>
-                <li>Salve como: <code>folheto-6up.pdf</code></li>
+                <li>Salve como: <code>folheto-4up.pdf</code> ou <code>folheto-6up.pdf</code></li>
             </ol>
         </div>
 
@@ -129,15 +131,21 @@
 
         <div class="step">
             <h3>🎯 Atalhos Rápidos</h3>
-            <button onclick="abrirFolheto()">📄 Folheto</button>
+            <button onclick="abrirFolheto4()">📄 Folheto 4-up</button>
+            <button onclick="abrirFolheto6()">📄 Folheto 6-up</button>
             <button onclick="abrirCartao()">🎴 Cartão</button>
         </div>
     </div>
 
     <script>
-        function abrirFolheto() {
+        function abrirFolheto4() {
+            window.open('folheto-4up.html', '_blank');
+            alert('✅ Folheto 4-up aberto!\n\n4 folhetos por folha A4 (RECOMENDADO)\n\n1. Aperte Ctrl + P\n2. Marque "Cores de fundo"\n3. Destino: Salvar como PDF\n4. Salve como: folheto-4up.pdf');
+        }
+
+        function abrirFolheto6() {
             window.open('folheto-6up.html', '_blank');
-            alert('✅ Folheto aberto em nova aba!\n\n1. Aperte Ctrl + P\n2. Marque "Cores de fundo"\n3. Destino: Salvar como PDF\n4. Salve como: folheto-6up.pdf');
+            alert('✅ Folheto 6-up aberto!\n\n6 folhetos por folha A4 (economia)\n\n1. Aperte Ctrl + P\n2. Marque "Cores de fundo"\n3. Destino: Salvar como PDF\n4. Salve como: folheto-6up.pdf');
         }
 
         function abrirCartao() {
