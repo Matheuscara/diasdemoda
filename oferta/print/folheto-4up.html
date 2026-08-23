@@ -29,7 +29,7 @@
         color: #2b1a22;
       }
       
-      /* Grade 2×2 para 4 folhetos A5 */
+      /* Grade 2×2 para 4 folhetos A5 na vertical */
       .sheet {
         width: 210mm;
         height: 297mm;
@@ -53,11 +53,9 @@
       }
       
       .folheto {
-        width: 148mm;
-        height: 210mm;
-        transform: scale(0.7) rotate(90deg);
-        transform-origin: center center;
-        overflow: visible;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
         position: relative;
       }
       
@@ -73,62 +71,62 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 12mm 11mm;
+        padding: 8mm 8mm;
         width: 100%;
         height: 100%;
       }
       .wordmark .top {
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
-        font-size: 24pt;
+        font-size: 18pt;
         letter-spacing: 0.08em;
         color: #2b1a22;
         line-height: 1;
       }
       .wordmark .sub {
-        font-size: 8.5pt;
+        font-size: 6.5pt;
         font-weight: 700;
         letter-spacing: 0.5em;
         color: #ae567c;
-        margin-top: 1.2mm;
+        margin-top: 1mm;
       }
       .eyebrow {
-        margin-top: 13mm;
-        font-size: 9pt;
+        margin-top: 8mm;
+        font-size: 7pt;
         font-weight: 700;
         letter-spacing: 0.34em;
         text-transform: uppercase;
         color: #ae567c;
       }
       .big {
-        margin-top: 5mm;
+        margin-top: 4mm;
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
-        font-size: 68pt;
+        font-size: 48pt;
         line-height: 0.92;
         color: #ae567c;
       }
       .big span {
         display: block;
-        font-size: 40pt;
+        font-size: 28pt;
         color: #2b1a22;
         letter-spacing: 0.02em;
       }
       .tagline {
-        margin-top: 4mm;
-        font-size: 13.5pt;
+        margin-top: 3mm;
+        font-size: 9.5pt;
         color: #5c4450;
-        max-width: 92mm;
+        max-width: 80mm;
       }
       .qr-wrap {
-        margin-top: 10mm;
-        width: 62mm;
-        height: 62mm;
+        margin-top: 6mm;
+        width: 45mm;
+        height: 45mm;
         background: #ffffff;
         border: 1.2pt solid #e1adb1;
-        border-radius: 5mm;
-        padding: 4mm;
-        box-shadow: 0 6mm 16mm -8mm rgb(43 26 34 / 0.45);
+        border-radius: 4mm;
+        padding: 3mm;
+        box-shadow: 0 4mm 12mm -6mm rgb(43 26 34 / 0.45);
       }
       .qr-wrap svg {
         display: block;
@@ -136,18 +134,18 @@
         height: 100%;
       }
       .qr-caption {
-        margin-top: 4mm;
-        font-size: 10.5pt;
+        margin-top: 3mm;
+        font-size: 8pt;
         font-weight: 700;
         color: #8c3f63;
       }
       .stitch {
         margin-top: auto;
-        width: 70mm;
+        width: 60mm;
       }
       .foot-note {
-        margin-top: 2.5mm;
-        font-size: 8pt;
+        margin-top: 2mm;
+        font-size: 6.5pt;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #8c6b77;
@@ -159,36 +157,37 @@
         color: #fbf6f4;
         display: flex;
         flex-direction: column;
-        padding: 13mm 11mm;
+        padding: 8mm 8mm;
         width: 100%;
         height: 100%;
       }
       .back .eyebrow {
-        margin: 0 0 3mm;
+        margin: 0 0 2mm;
         color: #e1adb1;
+        font-size: 7pt;
       }
       .back h2 {
         margin: 0;
         font-family: 'Cormorant Garamond', serif;
         font-weight: 600;
-        font-size: 27pt;
+        font-size: 19pt;
         line-height: 1.05;
       }
       .prod {
         display: flex;
         flex-direction: column;
-        gap: 2.6mm;
-        margin-top: 7mm;
+        gap: 2mm;
+        margin-top: 5mm;
       }
       .prod .item {
         display: flex;
         align-items: baseline;
-        gap: 3mm;
-        font-size: 12pt;
+        gap: 2mm;
+        font-size: 8.5pt;
       }
       .prod .item b {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 15pt;
+        font-size: 10.5pt;
         font-weight: 600;
         color: #e1adb1;
       }
@@ -197,19 +196,19 @@
       }
       .divider {
         height: 1pt;
-        margin: 8mm 0;
+        margin: 5mm 0;
         background: repeating-linear-gradient(90deg, #e1adb1 0 2mm, transparent 2mm 4mm);
         opacity: 0.5;
       }
       .perks {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 3mm;
-        font-size: 10.5pt;
+        gap: 2mm;
+        font-size: 7.5pt;
       }
       .perks div {
         display: flex;
-        gap: 2.5mm;
+        gap: 2mm;
       }
       .perks .star {
         color: #e1adb1;
@@ -218,22 +217,22 @@
         margin-top: auto;
         display: flex;
         align-items: center;
-        gap: 6mm;
+        gap: 4mm;
       }
       .contact {
         flex: 1;
-        font-size: 10.5pt;
+        font-size: 7.5pt;
         line-height: 1.6;
       }
       .contact b {
         color: #e1adb1;
       }
       .mini-qr {
-        width: 30mm;
-        height: 30mm;
+        width: 22mm;
+        height: 22mm;
         background: #fff;
-        border-radius: 2.5mm;
-        padding: 1.6mm;
+        border-radius: 2mm;
+        padding: 1.2mm;
         flex-shrink: 0;
       }
       .mini-qr svg {
@@ -242,12 +241,12 @@
         height: 100%;
       }
       .mini-label {
-        font-size: 7pt;
+        font-size: 5.5pt;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #e1adb1;
         text-align: center;
-        margin-top: 1mm;
+        margin-top: 0.8mm;
       }
     </style>
   </head>
