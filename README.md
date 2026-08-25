@@ -10,6 +10,8 @@ comandada por Alessandra Dias (36 anos de costura). Uma página, estática, com 
 
 ```
 site/       aplicação web (Vite + Tailwind v4 + Three.js). É o que vai pro ar.
+oferta/     landing de captação de leads (Cloudflare Workers)
+marketing/  posts e vídeos de Instagram guiados por spec — ver marketing/README.md
 blender/    fonte do modelo 3D da tesoura (glTF) + licença CC-BY
 Designer/   protótipo original (Claude Designer) e kit de marca, mantidos como referência
 ```

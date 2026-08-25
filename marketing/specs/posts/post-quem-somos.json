@@ -1,0 +1,27 @@
+{
+  "slug": "post-quem-somos",
+  "focus": "Apresentação da Dias de Moda — quem somos, como funciona e por que uniformizar",
+  "startRegister": "light",
+  "legenda": "A Dias de Moda nasceu da costura. São 36 anos de trabalho com linha, tecido e atenção a cada detalhe, produzindo uniformes que vestem a sua marca com elegância.\n\nNossa confecção fica em Rio Verde · GO e enviamos para todo o Goiás. Envie a sua logo e receba o orçamento no mesmo dia.\n\nChame no WhatsApp: +55 64 9943-1610",
+  "hashtags": ["#uniformes", "#uniformespersonalizados", "#confecção", "#costura", "#rioverdego", "#goiás", "#uniformesempresariais", "#fardamento"],
+  "slides": [
+    { "kind": "cover", "id": "capa", "kicker": "Quem somos", "title": "<em>36 anos</em><br>de costura", "sub": "Uniformes que vestem a sua marca com elegância. Arrasta pra conhecer →" },
+    { "kind": "point", "id": "sobre", "kicker": "A confecção", "ghost": "DM", "title": "Feito em <em>Rio Verde</em>, enviado pra todo Goiás", "size": 92, "sub": "Confecção própria, com controle de qualidade peça por peça." },
+    { "kind": "steps", "id": "como", "kicker": "Como funciona", "head": "Simples, do início ao fim", "steps": [
+      { "title": "Envie a sua logo", "sub": "Pelo WhatsApp, quando quiser." },
+      { "title": "Receba o orçamento", "sub": "No mesmo dia, com valor e prazo." },
+      { "title": "A gente produz", "sub": "Prazo combinado, qualidade conferida." },
+      { "title": "Você recebe", "sub": "Na sua empresa, em todo o Goiás." }
+    ] },
+    { "kind": "compare", "id": "porque", "kicker": "Por que uniformizar", "head": "A diferença que aparece",
+      "left": { "title": "Sem uniforme", "marker": "×", "items": ["Equipe sem identidade", "Primeira impressão fraca", "Cliente em dúvida de quem atende"] },
+      "right": { "title": "Com a Dias de Moda", "marker": "✓", "items": ["Marca vestida com elegância", "Confiança no primeiro olhar", "Time reconhecido na hora"] } },
+    { "kind": "card", "id": "atende", "kicker": "O que fazemos", "head": "Uniforme pra <em>cada</em> equipe", "ctitle": "linhas que produzimos", "rows": [
+      { "label": "Empresarial e equipes", "value": "polo · camisa" },
+      { "label": "Saúde", "value": "jaleco · pijama" },
+      { "label": "Cozinha e serviços", "value": "avental · calça", "hero": true }
+    ] },
+    { "kind": "big", "id": "frase", "register": "dark", "kicker": "Nosso jeito", "big": "Sua equipe é a sua <em>vitrine</em>.", "sub": "Cada pessoa vestida é a sua marca andando pela cidade." },
+    { "kind": "cta", "id": "cta", "title": "Vamos vestir<br>a sua marca?", "sub": "Orçamento no mesmo dia.", "pill": "Pedir orçamento no WhatsApp", "phone": "+55 64 9943-1610" }
+  ]
+}
