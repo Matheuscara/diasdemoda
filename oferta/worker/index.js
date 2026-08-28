@@ -180,13 +180,13 @@ async function updateStatus(request, env, id) {
   if (!status) return json({ error: 'Status inválido' }, 400);
 
   const info = await env.DB.prepare('UPDATE leads SET status = ? WHERE id = ?').bind(status, id).run();
-  if (!info.changes) return json({ error: 'Lead não encontrado' }, 404);
+  if (!info.meta.changes) return json({ error: 'Lead não encontrado' }, 404);
   return json({ ok: true });
 }
 
 async function deleteLead(env, id) {
   const info = await env.DB.prepare('DELETE FROM leads WHERE id = ?').bind(id).run();
-  if (!info.changes) return json({ error: 'Lead não encontrado' }, 404);
+  if (!info.meta.changes) return json({ error: 'Lead não encontrado' }, 404);
   return json({ ok: true });
 }
 
