@@ -48,6 +48,12 @@
       .btn:hover { background: var(--rose-deep); }
       .btn--ghost { background: transparent; color: var(--rose-deep); box-shadow: inset 0 0 0 2px var(--rose-light); }
       .btn--ghost:hover { background: var(--rose-surface); }
+      .btn-del {
+        border: 0; border-radius: 999px; padding: 0.35rem 0.85rem;
+        font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer;
+        background: #fdecea; color: #b3261e;
+      }
+      .btn-del:hover { background: #f5cfcb; }
 
       .table-wrap { background: #fff; border-radius: 1.25rem; border: 1px solid rgb(174 86 124 / 0.14); overflow-x: auto; box-shadow: 0 18px 40px -30px rgb(43 26 34 / 0.5); }
       table { width: 100%; border-collapse: collapse; min-width: 60rem; }
@@ -100,10 +106,11 @@
               <th>Quiz</th>
               <th>Cupom</th>
               <th>Status</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody data-tbody>
-            <tr><td colspan="7" class="empty">Carregando…</td></tr>
+            <tr><td colspan="8" class="empty">Carregando…</td></tr>
           </tbody>
         </table>
       </div>
@@ -148,7 +155,7 @@
         novosEl.textContent = leads.filter((l) => l.status === 'novo').length;
 
         if (!filtered.length) {
-          tbody.innerHTML = `<tr><td colspan="7" class="empty">${leads.length ? 'Nenhum lead encontrado para a busca.' : 'Nenhum lead ainda. Assim que o primeiro QR for lido, ele aparece aqui.'}</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="8" class="empty">${leads.length ? 'Nenhum lead encontrado para a busca.' : 'Nenhum lead ainda. Assim que o primeiro QR for lido, ele aparece aqui.'}</td></tr>`;
           return;
         }
 
@@ -170,6 +177,9 @@
                 <option value="recuperado" ${l.status === 'recuperado' ? 'selected' : ''}>Recuperado</option>
               </select>
             </td>
+            <td>
+              <button class="btn-del" data-del="${escapeHtml(l.id)}">Excluir</button>
+            </td>
           </tr>
         `).join('');
       };
@@ -182,7 +192,7 @@
 
       const load = async () => {
         errorBox.hidden = true;
-        tbody.innerHTML = '<tr><td colspan="7" class="empty">Carregando…</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" class="empty">Carregando…</td></tr>';
         try {
           const res = await fetch('/api/leads');
           if (res.status === 401) {
@@ -218,6 +228,26 @@
         } catch {
           errorBox.hidden = false;
           errorBox.textContent = 'Não foi possível salvar o status.';
+        }
+      });
+
+      // exclusão de lead (persistida no banco)
+      tbody.addEventListener('click', async (e) => {
+        const btn = e.target.closest('[data-del]');
+        if (!btn) return;
+        const id = btn.dataset.del;
+        const nome = btn.closest('tr')?.querySelector('.name')?.textContent || '';
+        if (!confirm(`Excluir o lead de "${nome}"? Esta ação não pode ser desfeita.`)) return;
+        btn.disabled = true;
+        try {
+          const res = await fetch(`/api/leads/${id}`, { method: 'DELETE' });
+          if (!res.ok) throw new Error('erro ' + res.status);
+          allLeads = allLeads.filter((l) => l.id !== id);
+          render(allLeads);
+        } catch (err) {
+          btn.disabled = false;
+          errorBox.hidden = false;
+          errorBox.textContent = 'Não foi possível excluir o lead: ' + err.message;
         }
       });
 

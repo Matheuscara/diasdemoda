@@ -7,6 +7,7 @@
  *   GET  /api/leads         -> lista leads (Basic Auth)
  *   GET  /api/leads?format=csv -> exporta CSV (Basic Auth)
  *   PATCH /api/leads/:id    -> atualiza o status do lead (Basic Auth)
+ *   DELETE /api/leads/:id   -> remove um lead (Basic Auth)
  *   /leads                  -> painel (Basic Auth)
  *   /oferta                 -> página de vendas (assets estáticos)
  */
@@ -183,6 +184,12 @@ async function updateStatus(request, env, id) {
   return json({ ok: true });
 }
 
+async function deleteLead(env, id) {
+  const info = await env.DB.prepare('DELETE FROM leads WHERE id = ?').bind(id).run();
+  if (!info.changes) return json({ error: 'Lead não encontrado' }, 404);
+  return json({ ok: true });
+}
+
 /* ---------------- roteamento ---------------- */
 
 export default {
@@ -207,6 +214,12 @@ export default {
       if (!isAuthorized(request, env)) return unauthorized();
       const id = path.slice('/api/leads/'.length);
       return updateStatus(request, env, id);
+    }
+
+    if (path.startsWith('/api/leads/') && request.method === 'DELETE') {
+      if (!isAuthorized(request, env)) return unauthorized();
+      const id = path.slice('/api/leads/'.length);
+      return deleteLead(env, id);
     }
 
     // Painel admin
