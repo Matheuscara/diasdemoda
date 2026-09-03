@@ -14,11 +14,22 @@
 
 const ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // sem 0/O/1/I/L
 
-function randomCode() {
+// desconto (%) por faixa de quantidade (resposta q2). Quanto mais peças, maior o desconto.
+const FAIXAS_DESCONTO = {
+  'Até 10': 5,
+  '11 a 30': 8,
+  '31 a 100': 12,
+  'Mais de 100': 15,
+};
+const DESCONTO_PADRAO = 5;
+
+const descontoPorFaixa = (q2) => FAIXAS_DESCONTO[q2] ?? DESCONTO_PADRAO;
+
+function randomCode(desconto = 15) {
   const bytes = crypto.getRandomValues(new Uint8Array(6));
   let code = '';
   for (let i = 0; i < 6; i++) code += ALPHABET[bytes[i] % ALPHABET.length];
-  return `DM15-${code}`;
+  return `DM${desconto}-${code}`;
 }
 
 const json = (data, status = 200) =>
@@ -43,11 +54,16 @@ async function ensureSchema(env) {
       q3         TEXT,
       q4         TEXT,
       codigo     TEXT,
+      desconto   INTEGER,
       status     TEXT NOT NULL DEFAULT 'novo',
       criado_em  TEXT NOT NULL DEFAULT (datetime('now'))
     )`,
   ).run();
   await env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_leads_criado_em ON leads (criado_em DESC)').run();
+  // migração para bancos criados antes da coluna de desconto (idempotente)
+  await env.DB.prepare('ALTER TABLE leads ADD COLUMN desconto INTEGER')
+    .run()
+    .catch(() => {});
   schemaReady = true;
 }
 
@@ -124,32 +140,35 @@ async function completeLead(request, env) {
   const id = String(body.id || '');
   if (!id) return json({ error: 'id ausente' }, 400);
 
-  const row = await env.DB.prepare('SELECT id, codigo FROM leads WHERE id = ?').bind(id).first();
+  const row = await env.DB.prepare('SELECT id, codigo, desconto FROM leads WHERE id = ?').bind(id).first();
   if (!row) return json({ error: 'Lead não encontrado' }, 404);
 
-  const codigo = row.codigo || randomCode();
+  const q2 = body.q2 ? String(body.q2) : null;
+  const desconto = row.desconto ?? descontoPorFaixa(q2);
+  const codigo = row.codigo || randomCode(desconto);
 
   await env.DB.prepare(
-    `UPDATE leads SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, codigo = ? WHERE id = ?`,
+    `UPDATE leads SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, codigo = ?, desconto = ? WHERE id = ?`,
   )
     .bind(
       body.q1 ? String(body.q1) : null,
-      body.q2 ? String(body.q2) : null,
+      q2,
       body.q3 ? String(body.q3) : null,
       body.q4 ? String(body.q4) : null,
       codigo,
+      desconto,
       id,
     )
     .run();
 
-  return json({ codigo });
+  return json({ codigo, desconto });
 }
 
 async function listLeads(env, url) {
   const { results } = await env.DB.prepare('SELECT * FROM leads ORDER BY criado_em DESC').all();
 
   if (url.searchParams.get('format') === 'csv') {
-    const cols = ['id', 'nome', 'empresa', 'telefone', 'origem', 'q1', 'q2', 'q3', 'q4', 'codigo', 'status', 'criado_em'];
+    const cols = ['id', 'nome', 'empresa', 'telefone', 'origem', 'q1', 'q2', 'q3', 'q4', 'codigo', 'desconto', 'status', 'criado_em'];
     const escapeCsv = (v) => {
       const s = v == null ? '' : String(v);
       return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;

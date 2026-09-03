@@ -8,6 +8,7 @@ const state = {
   form: { nome: '', empresa: '', telefone: '', origem: 'direto' },
   quiz: { q1: '', q2: '', q3: '', q4: '' },
   codigo: '',
+  desconto: 15,
 };
 
 const steps = Array.from(document.querySelectorAll('[data-step]'));
@@ -144,12 +145,22 @@ document.querySelectorAll('[data-quiz-form]').forEach((form) => {
 
 document.querySelector('[data-next]')?.addEventListener('click', () => showStep(3));
 
+/* ---------------- escada de desconto (passo 2) ---------------- */
+
+const tierSteps = Array.from(document.querySelectorAll('[data-tier-scale] .tier-step'));
+document.querySelectorAll('input[name="q2"]').forEach((input) => {
+  input.addEventListener('change', () => {
+    tierSteps.forEach((step) => step.classList.toggle('is-active', step.dataset.band === input.value));
+  });
+});
+
 /* ---------------- passo 5: cupom ---------------- */
 
 async function finalize() {
   try {
-    const { codigo } = await finishLead(state.leadId, state.quiz);
+    const { codigo, desconto } = await finishLead(state.leadId, state.quiz);
     state.codigo = codigo;
+    if (Number.isFinite(desconto)) state.desconto = desconto;
   } catch {
     state.codigo = ''; // nunca deve ocorrer, mas evita tela quebrada
   }
@@ -157,7 +168,11 @@ async function finalize() {
   const codeEl = document.querySelector('[data-coupon-code]');
   if (codeEl) codeEl.textContent = state.codigo;
 
-  const message = `Olá Alessandra! Ganhei o cupom ${state.codigo} (15% OFF) e quero fazer meu primeiro pedido.`;
+  document.querySelectorAll('[data-desconto]').forEach((el) => {
+    el.textContent = String(state.desconto);
+  });
+
+  const message = `Olá Alessandra! Ganhei o cupom ${state.codigo} (${state.desconto}% OFF) e quero fazer meu primeiro pedido.`;
   const waLink = document.querySelector('[data-whatsapp-link]');
   if (waLink) waLink.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
 

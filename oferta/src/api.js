@@ -12,11 +12,21 @@ const API = '/api';
 
 const ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // sem 0/O/1/I/L
 
-function clientCode() {
+// mesma tabela do Worker — quanto mais peças, maior o desconto
+const FAIXAS_DESCONTO = {
+  'Até 10': 5,
+  '11 a 30': 8,
+  '31 a 100': 12,
+  'Mais de 100': 15,
+};
+
+export const descontoPorFaixa = (q2) => FAIXAS_DESCONTO[q2] ?? 5;
+
+function clientCode(desconto = 15) {
   const bytes = crypto.getRandomValues(new Uint8Array(6));
   let code = '';
   for (let i = 0; i < 6; i++) code += ALPHABET[bytes[i] % ALPHABET.length];
-  return `DM15-${code}`;
+  return `DM${desconto}-${code}`;
 }
 
 /**
@@ -37,7 +47,7 @@ export async function saveLead(data) {
 }
 
 /**
- * Conclui o lead com as respostas do quiz. Retorna { codigo }.
+ * Conclui o lead com as respostas do quiz. Retorna { codigo, desconto }.
  */
 export async function finishLead(id, quiz) {
   try {
@@ -49,6 +59,7 @@ export async function finishLead(id, quiz) {
     if (!res.ok) throw new Error(`status ${res.status}`);
     return await res.json();
   } catch {
-    return { codigo: clientCode() };
+    const desconto = descontoPorFaixa(quiz.q2);
+    return { codigo: clientCode(desconto), desconto };
   }
 }

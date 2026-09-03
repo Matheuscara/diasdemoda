@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS leads (
   q2         TEXT,                            -- quantidade
   q3         TEXT,                            -- prazo
   q4         TEXT,                            -- arte da logo
-  codigo     TEXT,                            -- cupom DM15-XXXXXX
+  codigo     TEXT,                            -- cupom DM{pct}-XXXXXX
+  desconto   INTEGER,                         -- % de desconto por faixa de quantidade
   status     TEXT NOT NULL DEFAULT 'novo',    -- novo | contatado | recuperado
   criado_em  TEXT NOT NULL DEFAULT (datetime('now'))
 );
